@@ -13,13 +13,13 @@ This package enables to color the worldmap of different regions in countries usi
 - [License](#-copyright)
 
 ## Installation
-* Install hnet from PyPI (recommended). Hnet is compatible with Python 3.6+ and runs on Linux, MacOS X and Windows. 
+* Install worldmap from PyPI (recommended). Worldmap is compatible with Python 3.6+ and runs on Linux, MacOS X and Windows. 
 It is distributed under the Apache 2.0 license.
 
 ```
-pip install hnet
+pip install worldmap
 ```
-* Alternatively, install hnet from the GitHub source:
+* Alternatively, install worldmap from the GitHub source:
 
 ```bash
 git clone https://github.com/erdoganta/worldmap.git
@@ -79,7 +79,7 @@ regions_BE = worldmap.getmapnames(loadmap='belgium')
 ```
 
 ## Citation
-Please cite hnet in your publications if this is useful for your research. Here is an example BibTeX entry:
+Please cite worldmap in your publications if this is useful for your research. Here is an example BibTeX entry:
 ```BibTeX
 @misc{erdoganta2019worldmap,
   title={worldmap},
