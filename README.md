@@ -2,16 +2,7 @@
 [![PyPI Version](https://img.shields.io/pypi/v/worldmap)](https://pypi.org/project/worldmap/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/erdoganta/worldmap/blob/master/LICENSE)
 
-This package enables to color the worldmap using svg images.
-
-**Background** Real-world data sets often contain measurements with both continues and categorical values for the same sample. Despite the availability of many libraries, data sets with mixed data types require intensive pre-processing steps, and it remains a challenge to describe the relationships of one variable on another. The data understanding part is crucial but without making any assumptions on the model form, the search space is super-exponential in the number of variables and therefore not a common practice.
-**Result** We propose graphical hypergeometric networks (HNet), a method where associations across variables are tested for significance by statistical inference. The aim is to determine a network with significant associations that can shed light on the complex relationships across variables. HNet processes raw unstructured data sets and outputs a network that consists of (partially) directed or undirected edges between the nodes (i.e., variables). To evaluate the accuracy of HNet, we used well known data sets, and generated data sets with known ground truth by Bayesian sampling. In addition, the performance of HNet for the same data sets is compared to Bayesian structure learning.
-**Conclusions** We demonstrate that HNet showed high accuracy and performance in the detection of node links. In the case of the Alarm data set we can demonstrate an average MCC score 0.33 + 0.0002 (P<1x10-6), whereas Bayesian structure learning showed an average MCC score of 0.52 + 0.006 (P<1x10-11), and randomly assigning edges resulted in a MCC score of 0.004 + 0.0003 (P=0.49). Although Bayesian structure learning showed slightly better results, HNet overcomes some of the limitations of existing methods as it processes raw unstructured data sets, it allows analysis of mixed data types, it easily scales up in number of variables, and allows detailed examination of the detected associations.
-
-## Method overview
-<p align="center">
-  <img src="https://github.com/erdoganta/hnet/blob/master/docs/manuscript/figs/fig1.png" width="900" />
-</p>
+This package enables to color the worldmap of different regions in countries using svg images.
 
 ## Contents
 - [Installation](#-installation)
@@ -31,55 +22,70 @@ pip install hnet
 * Alternatively, install hnet from the GitHub source:
 
 ```bash
-git clone https://github.com/erdoganta/hnet.git
-cd hnet
+git clone https://github.com/erdoganta/worldmap.git
+cd worldmap
 python setup.py install
 ```  
 
 ## Quick Start
-- Import hnet method
+- Import worldmap method
 
 ```python
-from hnet import hnet
+import worldmap as worldmap
 ```
 
-- Simple example for the sprinkler data set
+- Simple example to color the different regions in the Netherlands:
 ```python
-df = pd.read_csv('https://github.com/erdoganta/hnet/blob/master/hnet/data/sprinkler_1000.csv')['close']
-out = hnet.fit(df)
-figHEAT = hnet.plot_heatmap(out)
-figNETW = hnet.plot_network(out)
-figD3GR = hnet.plot_d3graph(out)
+names   = ['zeeland','Overijssel', 'flevoland']
+opacity = [0.1, 0.2, 0.6]
+cmap    = ['#ff0000'] # Different red accents
+out = worldmap.colormap(names,opacity=opacity, cmap='Set1', loadmap='netherlands', filename='nederlandMap.svg')
 ```
 <p align="center">
-  <img src="https://github.com/erdoganta/hnet/blob/master/docs/manuscript/figs/fig2.png" width="900" />
+  <img src="https://github.com/erdoganta/worldmap/blob/master/docs/figs/figure_netherlands.png" width="900" />
 </p>
 
 
+- Simple example to color the worldmap:
 ```python
-df=pd.read_csv('https://github.com/erdoganta/hnet/blob/master/hnet/data/titanic_train.csv')['Close']
-out = hnet.fit(df)
-figHEAT = hnet.plot_heatmap(out)
-figNETW = hnet.plot_network(out)
-figD3GR = hnet.plot_d3graph(out)
+
+#### Coloring of maps   
+names   = ['Nederland']
+opacity = [100]
+out = worldmap.colormap(names, opacity=opacity, loadmap='world')
 ```
 <p align="center">
-  <img src="https://github.com/erdoganta/hnet/blob/master/docs/manuscript/figs/fig4.png" width="900" />
+  <img src="https://github.com/erdoganta/worldmap/blob/master/docs/figs/worldmap.png" width="900" />
 </p>
 
-## Performance
-<p align="center">
-  <img src="https://github.com/erdoganta/hnet/blob/master/docs/manuscript/figs/fig3.png" width="900" />
-</p>
+
+- Retrieve citynames for abbrevations:
+```python
+NL = worldmap.code2city('NL')
+GB = worldmap.code2city('GB')
+```
+
+- Retrieve citynames for abbrevations:
+```python
+locA=worldmap.city2code('Netherlands')
+locB=worldmap.city2code('Germany')
+```
+
+- Retrieve names in map
+```python
+countries_world = worldmap.getmapnames(loadmap='world')
+region_NL = worldmap.getmapnames(loadmap='netherlands')
+regions_BE = worldmap.getmapnames(loadmap='belgium')
+```
 
 ## Citation
 Please cite hnet in your publications if this is useful for your research. Here is an example BibTeX entry:
 ```BibTeX
-@misc{erdoganta2019hnet,
-  title={hnet},
+@misc{erdoganta2019worldmap,
+  title={worldmap},
   author={Erdogan Taskesen},
   year={2019},
-  howpublished={\url{https://github.com/erdoganta/hnet}},
+  howpublished={\url{https://github.com/erdoganta/worldmap}},
 }
 ```
 
