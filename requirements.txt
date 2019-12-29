@@ -1,0 +1,4 @@
+#conda create -n env_WORLDMAP python=3.6
+#conda activate env_WORLDMAP
+pip install numpy pandas seaborn sklearn svgpathtools
+#conda install spyder

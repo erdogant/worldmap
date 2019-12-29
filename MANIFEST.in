@@ -1,0 +1,4 @@
+include versioneer.py
+include worldmap/_version.py
+include worldmap/data/*.zip
+include worldmap/data/*.txt
