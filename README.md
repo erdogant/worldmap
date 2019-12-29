@@ -42,7 +42,7 @@ cmap    = ['#ff0000'] # Different red accents
 out = worldmap.colormap(names,opacity=opacity, cmap='Set1', loadmap='netherlands', filename='nederlandMap.svg')
 ```
 <p align="center">
-  <img src="https://github.com/erdoganta/worldmap/blob/master/docs/figs/figure_netherlands.png" width="600" />
+  <img src="https://github.com/erdoganta/worldmap/blob/master/docs/figs/figure_netherlands.png" width="300" />
 </p>
 
 
@@ -55,7 +55,7 @@ opacity = [100]
 out = worldmap.colormap(names, opacity=opacity, loadmap='world')
 ```
 <p align="center">
-  <img src="https://github.com/erdoganta/worldmap/blob/master/docs/figs/worldmap.png" width="600" />
+  <img src="https://github.com/erdoganta/worldmap/blob/master/docs/figs/worldmap.png" width="300" />
 </p>
 
 
