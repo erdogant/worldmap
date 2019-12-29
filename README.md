@@ -1,4 +1,4 @@
-# WORLDMAP
+# Worldmap
 [![PyPI Version](https://img.shields.io/pypi/v/worldmap)](https://pypi.org/project/worldmap/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/erdoganta/worldmap/blob/master/LICENSE)
 
@@ -42,7 +42,7 @@ cmap    = ['#ff0000'] # Different red accents
 out = worldmap.colormap(names,opacity=opacity, cmap='Set1', loadmap='netherlands', filename='nederlandMap.svg')
 ```
 <p align="center">
-  <img src="https://github.com/erdoganta/worldmap/blob/master/docs/figs/figure_netherlands.png" width="900" />
+  <img src="https://github.com/erdoganta/worldmap/blob/master/docs/figs/figure_netherlands.png" width="600" />
 </p>
 
 
@@ -55,7 +55,7 @@ opacity = [100]
 out = worldmap.colormap(names, opacity=opacity, loadmap='world')
 ```
 <p align="center">
-  <img src="https://github.com/erdoganta/worldmap/blob/master/docs/figs/worldmap.png" width="900" />
+  <img src="https://github.com/erdoganta/worldmap/blob/master/docs/figs/worldmap.png" width="600" />
 </p>
 
 
