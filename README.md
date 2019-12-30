@@ -91,6 +91,4 @@ Please cite worldmap in your publications if this is useful for your research. H
 
 ## Maintainers
 * Erdogan Taskesen, github: [erdoganta](https://github.com/erdoganta)
-
-## © Copyright
 See [LICENSE](LICENSE) for details.
