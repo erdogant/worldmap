@@ -1,6 +1,6 @@
 # Worldmap
 [![PyPI Version](https://img.shields.io/pypi/v/worldmap)](https://pypi.org/project/worldmap/)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/erdoganta/worldmap/blob/master/LICENSE)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/erdogant/worldmap/blob/master/LICENSE)
 
 This package enables to color the worldmap of different regions in countries using svg images.
 
@@ -22,7 +22,7 @@ pip install worldmap
 * Alternatively, install worldmap from the GitHub source:
 
 ```bash
-git clone https://github.com/erdoganta/worldmap.git
+git clone https://github.com/erdogant/worldmap.git
 cd worldmap
 python setup.py install
 ```  
@@ -42,7 +42,7 @@ cmap    = ['#ff0000'] # Different red accents
 out = worldmap.colormap(names,opacity=opacity, cmap='Set1', loadmap='netherlands', filename='nederlandMap.svg')
 ```
 <p align="center">
-  <img src="https://github.com/erdoganta/worldmap/blob/master/docs/figs/figure_netherlands.png" width="300" />
+  <img src="https://github.com/erdogant/worldmap/blob/master/docs/figs/figure_netherlands.png" width="300" />
 </p>
 
 
@@ -55,7 +55,7 @@ opacity = [100]
 out = worldmap.colormap(names, opacity=opacity, loadmap='world')
 ```
 <p align="center">
-  <img src="https://github.com/erdoganta/worldmap/blob/master/docs/figs/worldmap.png" width="300" />
+  <img src="https://github.com/erdogant/worldmap/blob/master/docs/figs/worldmap.png" width="300" />
 </p>
 
 
@@ -81,14 +81,14 @@ regions_BE = worldmap.getmapnames(loadmap='belgium')
 ## Citation
 Please cite worldmap in your publications if this is useful for your research. Here is an example BibTeX entry:
 ```BibTeX
-@misc{erdoganta2019worldmap,
+@misc{erdogant2019worldmap,
   title={worldmap},
   author={Erdogan Taskesen},
   year={2019},
-  howpublished={\url{https://github.com/erdoganta/worldmap}},
+  howpublished={\url{https://github.com/erdogant/worldmap}},
 }
 ```
 
 ## Maintainers
-* Erdogan Taskesen, github: [erdoganta](https://github.com/erdoganta)
+* Erdogan Taskesen, github: [erdogant](https://github.com/erdogant)
 See [LICENSE](LICENSE) for details.

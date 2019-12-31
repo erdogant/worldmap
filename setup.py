@@ -1,6 +1,6 @@
 import setuptools
 import versioneer
-new_version='0.1.1'
+new_version='0.1.2'
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -16,8 +16,8 @@ setuptools.setup(
      description="Color the worldmap",
      long_description=long_description,
      long_description_content_type="text/markdown",
-     url="https://github.com/erdoganta/worldmap",
-	 download_url = 'https://github.com/erdoganta/worldmap/archive/'+new_version+'.tar.gz',
+     url="https://github.com/erdogant/worldmap",
+	 download_url = 'https://github.com/erdogant/worldmap/archive/'+new_version+'.tar.gz',
      packages=setuptools.find_packages(), # Searches throughout all dirs for files to include
      include_package_data=True, # Must be true to include files depicted in MANIFEST.in
      classifiers=[
