@@ -2,7 +2,8 @@
 [![PyPI Version](https://img.shields.io/pypi/v/worldmap)](https://pypi.org/project/worldmap/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/erdogant/worldmap/blob/master/LICENSE)
 
-This python package enables to color (in svg images) different countries in the world or the regions per country.
+This python package enables to color different countries in the world or the regions per country. For this package, the svg images from https://www.w3.org are utilized, processed and colored.
+
 
 ## Contents
 - [Installation](#-installation)
@@ -88,6 +89,9 @@ Please cite worldmap in your publications if this is useful for your research. H
   howpublished={\url{https://github.com/erdogant/worldmap}},
 }
 ```
+
+## References:
+* http://www.w3.org/Consortium/Legal/copyright-software
 
 ## Maintainers
 * Erdogan Taskesen, github: [erdogant](https://github.com/erdogant)
