@@ -9,7 +9,6 @@ __pycache__/
 # Distribution / packaging
 .Python
 assets/
-DATA/
 results/
 tmp/
 results/
