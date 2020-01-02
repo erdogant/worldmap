@@ -2,7 +2,7 @@
 [![PyPI Version](https://img.shields.io/pypi/v/worldmap)](https://pypi.org/project/worldmap/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/erdogant/worldmap/blob/master/LICENSE)
 
-This package enables to color the worldmap of different regions in countries using svg images.
+This python package enables to color (in svg images) different countries in the world or the regions per country.
 
 ## Contents
 - [Installation](#-installation)
@@ -14,7 +14,7 @@ This package enables to color the worldmap of different regions in countries usi
 
 ## Installation
 * Install worldmap from PyPI (recommended). Worldmap is compatible with Python 3.6+ and runs on Linux, MacOS X and Windows. 
-It is distributed under the Apache 2.0 license.
+* Distributed under the Apache 2.0 license.
 
 ```
 pip install worldmap
