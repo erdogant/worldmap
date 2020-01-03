@@ -1,4 +1,5 @@
 # Worldmap
+[![Python](https://img.shields.io/pypi/pyversions/worldmap)](https://img.shields.io/pypi/pyversions/worldmap)
 [![PyPI Version](https://img.shields.io/pypi/v/worldmap)](https://pypi.org/project/worldmap/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/erdogant/worldmap/blob/master/LICENSE)
 
