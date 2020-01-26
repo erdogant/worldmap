@@ -3,7 +3,7 @@
 [![PyPI Version](https://img.shields.io/pypi/v/worldmap)](https://pypi.org/project/worldmap/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/erdogant/worldmap/blob/master/LICENSE)
 [![Downloads](https://pepy.tech/badge/worldmap/week)](https://pepy.tech/project/worldmap/week)
-[![Donate Bitcoin](https://img.shields.io/badge/donate-grey.svg)](https://erdogant.github.io/donate/?currency=USD&amount=5)
+[![Donate](https://img.shields.io/badge/donate-grey.svg)](https://erdogant.github.io/donate/?currency=USD&amount=5)
 
 This python package enables to color different countries in the world or the regions per country. For this package, the svg images from https://www.w3.org are utilized, processed and colored.
 
@@ -103,4 +103,4 @@ Please cite worldmap in your publications if this is useful for your research. H
 * See [LICENSE](LICENSE) for details.
 
 ### Donation
-* This work is created and maintained in my free time. If this package is usefull to you and if want to see more like this, you can show your <a href="https://erdogant.github.io/donate/?currency=USD&amount=5">gratitude</a> :) Thanks!
+* This package is created and maintained in my free time. If this package is usefull, you can show your <a href="https://erdogant.github.io/donate/?currency=USD&amount=5">gratitude</a> :) Thanks!
