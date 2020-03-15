@@ -1,10 +1,10 @@
 from worldmap.worldmap import (
-    colormap,
-    getmapnames,
- 	getmaps,
- 	code2city,
- 	city2code,
-)
+    plot,
+    county_names,
+    map_names,
+    code2county,
+    county2code,
+    )
 
 __author__ = 'Erdogan Tasksen'
 __email__ = 'erdogant@gmail.com'
@@ -17,16 +17,18 @@ worldmap
 
 Description
 -----------
-worldmap is for...
+worldmap is to plot and color countries or specific regions in a country using offline approaches.
 
 Example
 -------
->>> import worldmap as worldmap
->>> model = worldmap.fit(X)
->>> fig,ax = worldmap.plot(model)
+>>> import worldmap
+>>> county_names = ['zeeland','Overijssel', 'flevoland']
+>>> opacity = [0.4, 0.6, 0.9]
+>>> out = worldmap.plot(county_names,opacity=opacity, cmap='Set1', map_name='netherlands', filename='Netherlands_map.svg')
 
 References
 ----------
-https://github.com/erdogant/worldmap
+* https://github.com/erdogant/worldmap
+* http://www.amcharts.com/svg-maps/
 
 """
