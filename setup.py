@@ -15,7 +15,7 @@ with open("README.md", "r") as fh:
 setuptools.setup(
      install_requires=['wget','matplotlib','numpy','pandas','svgpathtools','colourmap','tqdm','fuzzywuzzy[speedup]','sklearn'],
      python_requires='>=3',
-     name='worldmap',
+     name='worldmap is to plot and color countries or specific regions in a country using offline approaches.',
      version=new_version,
      author="Erdogan Taskesen",
      author_email="erdogant@gmail.com",
