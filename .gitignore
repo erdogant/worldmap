@@ -7,7 +7,7 @@ __pycache__/
 *.so
 
 # DATA
-worldmap/data/SVG_MAPS.zip
+worldmap/data/*.zip
 *.svg
 
 # Distribution / packaging
