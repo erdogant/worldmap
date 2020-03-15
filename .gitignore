@@ -6,12 +6,13 @@ __pycache__/
 # C extensions
 *.so
 
+# DATA
+*.zip
+*.svg
+
 # Distribution / packaging
+.pylint.*
 .Python
-assets/
-results/
-tmp/
-results/
 build/
 develop-eggs/
 dist/
@@ -131,3 +132,4 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+.pylint.*
