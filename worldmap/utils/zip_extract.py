@@ -17,22 +17,14 @@
 
  DESCRIPTION
    Extracts the content of a zipfile into a tmp directory
-
- EXAMPLE
-   from etlearn.helpers.zip_extract import zip_extract
-
    A = extract('./mydir/files.zip')
-
- SEE ALSO
 
 """
 
 #--------------------------------------------------------------------------
-# Name        : zip.py
 # Version     : 1.0
 # Author      : E.Taskesen
 # Contact     : erdogant@gmail.com
-# Date        : Aug. 2018
 #--------------------------------------------------------------------------
 
 #from matplotlib.pyplot import plot

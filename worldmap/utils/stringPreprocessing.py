@@ -44,8 +44,6 @@
 # Name        : stringPreprocessing.py
 # Version     : 1.0
 # Author      : E.Taskesen
-# Contact     : erdogan.taskesen@bigdatarepublic.nl
-# Company     : BigData Republic
 # Date        : Dec. 2017
 #--------------------------------------------------------------------------
 
@@ -54,7 +52,7 @@ import numpy as np
 import pandas as pd
 import re
 from tqdm import tqdm
-import worldmap.strtricks as strtricks # Some string tricks
+import worldmap.utils.strtricks as strtricks # Some string tricks
 
 checkLen = np.vectorize(len) # To check length in arrays
 
