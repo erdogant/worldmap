@@ -32,3 +32,4 @@ country_names = ['Nederland', 'austrialia', 'brazile']
 cmap = ['#000fff','#000fff','#000fff']
 out = worldmap.plot(country_names, cmap=cmap, map_name='world')
 
+# %%
