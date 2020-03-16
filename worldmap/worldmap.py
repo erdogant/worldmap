@@ -18,8 +18,8 @@ import colourmap
 import seaborn as sns
 import webbrowser
 
-from worldmap.zip_extract import zip_extract
-from worldmap.deepStringMatching import deepStringMatching
+from worldmap.utils.zip_extract import zip_extract
+from worldmap.utils.deepStringMatching import deepStringMatching
 
 global PATH_MAPZIP, CITYCODE
 curpath = os.path.dirname(os.path.abspath(__file__))
@@ -151,7 +151,7 @@ def plot(county_names, map_name='world', opacity=[], cmap='Set1', filename='cust
 
 # %% Loopup available names for map
 def county_names(map_name='world'):
-    """Retrieve all county_names
+    """Retrieve all county_names.
 
     Parameters
     ----------

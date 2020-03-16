@@ -76,8 +76,8 @@ from sklearn.preprocessing import minmax_scale
 from svgpathtools import svg2paths
 # import webbrowser
 
-from worldmap.zip_extract import zip_extract
-from worldmap.deepStringMatching import deepStringMatching
+from worldmap.utils.zip_extract import zip_extract
+from worldmap.utils.deepStringMatching import deepStringMatching
 
 global PATH_MAPZIP, CITYCODE
 curpath = os.path.dirname(os.path.abspath( __file__ ))
