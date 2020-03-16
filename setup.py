@@ -15,11 +15,11 @@ with open("README.md", "r") as fh:
 setuptools.setup(
      install_requires=['wget','matplotlib','numpy','pandas','svgpathtools','colourmap','tqdm','fuzzywuzzy[speedup]','sklearn'],
      python_requires='>=3',
-     name='worldmap is to plot and color countries or specific regions in a country using offline approaches.',
+     name='worldmap',
      version=new_version,
      author="Erdogan Taskesen",
      author_email="erdogant@gmail.com",
-     description="Python package worldmap",
+     description="worldmap is to plot and color countries or specific regions in a country using offline approaches.",
      long_description=long_description,
      long_description_content_type="text/markdown",
      url="https://github.com/erdogant/worldmap",
