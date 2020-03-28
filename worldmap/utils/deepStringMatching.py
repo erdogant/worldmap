@@ -85,8 +85,8 @@
 
  SEE ALSO
    lcs (longest common string)
-   pip install fuzzywuzzy[speedup] #  python-Levenshtein matching
-   fuzzywuzzy
+   pip install rapidfuzz #  python-Levenshtein matching
+   rapidfuzz
 
 """
 
@@ -105,7 +105,7 @@ from tqdm import tqdm
 import worldmap.utils.stringPreprocessing as stringPreprocessing
 
 checkLen = np.vectorize(len) # To check length in arrays
-from fuzzywuzzy import fuzz
+from rapidfuzz import fuzz
 
 #%%
 def deepStringMatching(data, alias, remwords=[], minchar=2, maxchar=25, maxlen=200, scoreOK=1, clean=['complete'], methodtype=['complete'], verbose=1):

@@ -13,7 +13,7 @@ else:
 with open("README.md", "r") as fh:
     long_description = fh.read()
 setuptools.setup(
-     install_requires=['wget','matplotlib','numpy','pandas','svgpathtools','colourmap','tqdm','fuzzywuzzy[speedup]','sklearn','seaborn'],
+     install_requires=['wget','matplotlib','numpy','pandas','svgpathtools','colourmap','tqdm','rapidfuzz','sklearn','seaborn'],
      python_requires='>=3',
      name='worldmap',
      version=new_version,
