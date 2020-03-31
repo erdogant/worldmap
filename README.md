@@ -32,9 +32,6 @@ cd worldmap
 python setup.py install
 ```  
 
-## Quick Start
-- Import worldmap method
-
 ```python
 import worldmap as worldmap
 ```
@@ -44,7 +41,7 @@ import worldmap as worldmap
 names   = ['zeeland','Overijssel', 'flevoland']
 opacity = [0.1, 0.2, 0.6]
 cmap    = ['#ff0000'] # Different red accents
-out = worldmap.colormap(names,opacity=opacity, cmap='Set1', loadmap='netherlands', filename='nederlandMap.svg')
+out = worldmap.colormap(names,opacity=opacity, cmap='Set1', loadmap='netherlands')
 ```
 <p align="center">
   <img src="https://github.com/erdogant/worldmap/blob/master/docs/figs/figure_netherlands.png" width="300" />
@@ -72,8 +69,8 @@ GB = worldmap.code2city('GB')
 
 - Retrieve citynames for abbrevations:
 ```python
-locA=worldmap.city2code('Netherlands')
-locB=worldmap.city2code('Germany')
+abbr_1 = worldmap.city2code('Netherlands')
+abbr_2 = worldmap.city2code('Germany')
 ```
 
 - Retrieve names in map
