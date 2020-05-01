@@ -70,7 +70,7 @@ def plot(county_names, map_name='world', opacity=[], cmap='Set1', filename='cust
     Param['county_names'] = county_names
     Param['opacity'] = opacity
     Param['verbose'] = verbose
-    Param['map_name'] = map_name
+    Param['map_name'] = map_name.lower()
     Param['filename'] = filename
     Param['showfig'] = showfig
     Param['cmap'] = cmap
@@ -90,6 +90,7 @@ def plot(county_names, map_name='world', opacity=[], cmap='Set1', filename='cust
 
     # Get color schemes
     if 'str' in str(type(Param['cmap'])):
+        import colourmap
         getcolors=np.array(sns.color_palette(Param['cmap'],len(Param['county_names'])).as_hex())
         # getcolors=colourmap.generate(len(Param['county_names']), cmap=Param['cmap'])
     elif 'list' in str(type(Param['cmap'])) and len(Param['cmap'])==1:
@@ -150,7 +151,7 @@ def plot(county_names, map_name='world', opacity=[], cmap='Set1', filename='cust
 
 
 # %% Loopup available names for map
-def county_names(map_name='world'):
+def list_county_names(map_name='world'):
     """Retrieve all county_names.
 
     Parameters
@@ -177,7 +178,7 @@ def county_names(map_name='world'):
 
 
 # %% Loopup code for cityname
-def map_names():
+def list_map_names():
     """Retrieve all map names.
 
     Returns
@@ -213,9 +214,9 @@ def county2code(county_names):
 
     df=pd.read_csv(CITYCODE, sep=';', encoding='latin1')
     try:
-        [dfmatch,_]=deepStringMatching(df.Country,county_names,methodtype='FUZZY', verbose=0)
+        [dfmatch,_] = deepStringMatching(df.Country, county_names, methodtype='FUZZY', verbose=0)
         citymatch = dfmatch.idxmax(axis=0).values
-        dfmatch.index=list(df.code)
+        dfmatch.index = list(df.code)
         citycode = list(dfmatch.idxmax(axis=0).values)
     except:
         idx = np.where(np.isin(df.Country.str.lower(), county_names.lower()))[0]
@@ -243,6 +244,7 @@ def code2county(codes):
     [DIROK, DIRMAP] = download_resources()
 
     citymatch=''
+    citycode=None
     codes = str.lower(codes)
     df=pd.read_csv(CITYCODE, sep=';', encoding='latin1')
     idx = np.where(np.isin(df.code.str.lower(), codes))[0]
@@ -287,7 +289,7 @@ def download_resources(url='https://erdogant.github.io/datasets/SVG_MAPS.zip', v
 def _matchmap(map_name):
     out=''
     # Get all map names from directory
-    [getcounty_names,getfiles] = map_names()
+    [getcounty_names,getfiles] = list_map_names()
 
     # Match name
     try:

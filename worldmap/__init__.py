@@ -1,9 +1,9 @@
 from worldmap.worldmap import (
     plot,
-    county_names,
-    map_names,
     code2county,
     county2code,
+    list_county_names,
+    list_map_names,
     )
 
 __author__ = 'Erdogan Tasksen'
