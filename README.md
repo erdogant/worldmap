@@ -8,34 +8,21 @@
 [![Project Status](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![Downloads](https://pepy.tech/badge/worldmap/month)](https://pepy.tech/project/worldmap/month)
 [![Downloads](https://pepy.tech/badge/worldmap)](https://pepy.tech/project/worldmap)
-[![BuyMeCoffee](https://img.shields.io/badge/buymea-coffee-yellow.svg)](https://www.buymeacoffee.com/erdogant)
+<!---[![BuyMeCoffee](https://img.shields.io/badge/buymea-coffee-yellow.svg)](https://www.buymeacoffee.com/erdogant)-->
 <!---[![Coffee](https://img.shields.io/badge/coffee-black-grey.svg)](https://erdogant.github.io/donate/?currency=USD&amount=5)-->
 
-This python package enables to color different countries in the world or the regions per country. For this package, the svg images from https://www.w3.org are utilized, processed and colored.
+The ``worldmap`` python package enables to color different countries in the world or the regions per country. For this package, the svg images from https://www.w3.org are utilized, processed and colored.
 
+# 
+**Star this repo if you like it! ⭐️**
+#
 
-## Contents
-- [Installation](#-installation)
-- [Quick Start](#-quick-start)
-- [Contribute](#-contribute)
-- [Citation](#-citation)
-- [Maintainers](#-maintainers)
-- [License](#-copyright)
 
 ## Installation
-* Install worldmap from PyPI (recommended). Worldmap is compatible with Python 3.6+ and runs on Linux, MacOS X and Windows. 
-* Distributed under the Apache 2.0 license.
-
-```
-pip install worldmap
-```
-* Alternatively, install worldmap from the GitHub source:
 
 ```bash
-git clone https://github.com/erdogant/worldmap.git
-cd worldmap
-python setup.py install
-```  
+pip install worldmap
+```
 
 ```python
 import worldmap as worldmap
