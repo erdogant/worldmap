@@ -8,6 +8,7 @@
 [![Project Status](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![Downloads](https://pepy.tech/badge/worldmap/month)](https://pepy.tech/project/worldmap/month)
 [![Downloads](https://pepy.tech/badge/worldmap)](https://pepy.tech/project/worldmap)
+[![Sphinx](https://img.shields.io/badge/Sphinx-Docs-Green)](https://erdogant.github.io/worldmap/)
 <!---[![BuyMeCoffee](https://img.shields.io/badge/buymea-coffee-yellow.svg)](https://www.buymeacoffee.com/erdogant)-->
 <!---[![Coffee](https://img.shields.io/badge/coffee-black-grey.svg)](https://erdogant.github.io/donate/?currency=USD&amount=5)-->
 
@@ -15,76 +16,63 @@
 For this package, the svg images from https://www.w3.org are utilized, processed and colored.
 It requires downloading the svg files a single time and then works offline.
 
-
 # 
-**Star this repo if you like it! ⭐️**
+**⭐️ Star this repo if you like it ⭐️**
 #
 
-
-## Installation
+#### Install worldmap from PyPI
 
 ```bash
 pip install worldmap
 ```
 
+#### Import worldmap package
+
 ```python
 import worldmap as wm
 ```
+# 
 
-- Simple example to color the different regions in the Netherlands:
-```python
-names   = ['zeeland','Overijssel', 'flevoland']
-opacity = [0.1, 0.2, 0.6]
-cmap    = ['#ff0000'] # Different red accents
-out = wm.plot(names,opacity=opacity, cmap='Set1', map_name='netherlands')
-```
-<p align="center">
-  <img src="https://github.com/erdogant/worldmap/blob/master/docs/figs/figure_netherlands.png" width="300" />
+
+### [Documentation pages](https://erdogant.github.io/worldmap/)
+
+On the [documentation pages](https://erdogant.github.io/worldmap/) you can find detailed information about the working of the ``worldmap`` with many examples. 
+
+<hr> 
+
+### Examples
+
+# 
+
+* [Example: color the different regions in a country](https://erdogant.github.io/worldmap/pages/html/Examples.html)
+
+<p align="left">
+  <a href="https://erdogant.github.io/worldmap/pages/html/Examples.html">
+  <img src="https://github.com/erdogant/worldmap/blob/master/docs/figs/figure_netherlands.png" width="600" />
+  </a>
 </p>
 
 
-- Simple example to color the worldmap:
-```python
+# 
 
-#### Coloring of maps   
-names   = ['Nederland']
-opacity = [100]
-out = wm.plot(names, opacity=opacity, cmap='Set1', map_name='netherlands')
-```
-<p align="center">
-  <img src="https://github.com/erdogant/worldmap/blob/master/docs/figs/worldmap.png" width="300" />
+* [Example: color the different in the worldmap](https://erdogant.github.io/worldmap/pages/html/Examples.html#coloring-of-country-in-worldmap)
+
+<p align="left">
+  <a href="https://erdogant.github.io/worldmap/pages/html/Examples.html#coloring-of-country-in-worldmap">
+  <img src="https://github.com/erdogant/worldmap/blob/master/docs/figs/fig_world.png" width="600" />
+  </a>
 </p>
 
 
-- Retrieve citynames for abbrevations:
-```python
-NL = wm.code2county('NL')
-GB = wm.code2county('GB')
-```
+# 
+* [Example: Retrieve all Map Names](https://erdogant.github.io/worldmap/pages/html/Examples.html#retrieve-all-map-names)
+# 
+* [Example: Retrieve county Names](https://erdogant.github.io/worldmap/pages/html/Examples.html#retrieve-county-names)
+# 
+* [Example: Convert county name to abbrevation](https://erdogant.github.io/worldmap/pages/html/Examples.html#convert-country-to-abbrevation)
+# 
+* [Example: Convert abbrevation to county name](https://erdogant.github.io/worldmap/pages/html/Examples.html#convert-abbrevations-to-county-names)
 
-- Retrieve citynames for abbrevations:
-```python
-abbr_1 = wm.county2code('Netherlands')
-abbr_2 = wm.county2code('Germany')
-```
-
-- Retrieve names in map
-```python
-countries_world = wm.list_county_names(map_name='world')
-region_NL = wm.list_county_names(map_name='netherlands')
-regions_BE = wm.list_county_names(map_name='belgium')
-```
-
-### Citation
-Please cite worldmap in your publications if this is useful for your research. Here is an example BibTeX entry:
-```BibTeX
-@misc{erdogant2019worldmap,
-  title={worldmap},
-  author={Erdogan Taskesen},
-  year={2019},
-  howpublished={\url{https://github.com/erdogant/worldmap}},
-}
-```
 
 ### References:
 * http://www.w3.org/Consortium/Legal/copyright-software
