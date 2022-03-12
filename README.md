@@ -48,7 +48,7 @@ On the [documentation pages](https://erdogant.github.io/worldmap/) you can find 
 
 <p align="left">
   <a href="https://erdogant.github.io/worldmap/pages/html/Examples.html">
-  <img src="https://github.com/erdogant/worldmap/blob/master/docs/figs/figure_netherlands.png" width="600" />
+  <img src="https://github.com/erdogant/worldmap/blob/master/docs/figs/figure_netherlands.png" width="300" />
   </a>
 </p>
 
