@@ -16,8 +16,7 @@ out = worldmap.code2county('NL')
 out = worldmap.code2county('GB')
 
 # %% Retrieve abbrevations for city names
-out = worldmap.county2code('Netherlands')
-out = worldmap.county2code('Germany')
+results = worldmap.county2code(['Netherlands', 'Germany'])
 
 # %% Coloring of maps
 county_names = ['zeeland', 'Overijssel', 'flevoland']
