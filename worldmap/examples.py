@@ -20,16 +20,16 @@ out = worldmap.county2code('Netherlands')
 out = worldmap.county2code('Germany')
 
 # %% Coloring of maps
-county_names = ['zeeland','Overijssel', 'flevoland']
+county_names = ['zeeland', 'Overijssel', 'flevoland']
 opacity = [0.4, 0.6, 0.9]
-out = worldmap.plot(county_names,opacity=opacity, cmap='Set1', map_name='netherlands', filename='Netherlands_map.svg')
+results = worldmap.plot(county_names, opacity=opacity, cmap='Set1', map_name='netherlands', filename='Netherlands_map.svg')
 
-county_names = ['Norway','Nederland','belgium']
-opacity = [10, 25, 5]
-out = worldmap.plot(county_names, opacity=opacity, map_name='world', cmap='Set2')
+county_names = ['Norway', 'Nederland', 'brazile', 'austrialia']
+opacity = [10, 25, 35, 15]
+out = worldmap.plot(county_names, opacity=opacity, map_name='world', cmap='Set1')
 
 country_names = ['Nederland', 'austrialia', 'brazile']
-cmap = ['#000fff','#000fff','#000fff']
+cmap = ['#000fff', '#000fff', '#000fff']
 out = worldmap.plot(country_names, cmap=cmap, map_name='world')
 
 # %%
