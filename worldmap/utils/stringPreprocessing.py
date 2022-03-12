@@ -266,7 +266,7 @@ def stringClean(data):
 #%% Cleaning strings
 def delnumstring(data):
     data = pd.DataFrame(data=data,columns=['data'])
-    data.data = data.data.str.replace('\d+','')
+    data.data = data.data.str.replace('\d+','', regex=True)
     #delnumstring = np.vectorize(del_num_in_string)
     #data = delnumstring(data)
     return data.data.values.astype(str)

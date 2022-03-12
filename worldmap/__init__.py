@@ -8,7 +8,7 @@ from worldmap.worldmap import (
 
 __author__ = 'Erdogan Tasksen'
 __email__ = 'erdogant@gmail.com'
-__version__ = '0.1.6'
+__version__ = '0.1.7'
 
 # module level doc-string
 __doc__ = """
@@ -21,10 +21,17 @@ worldmap is to plot and color countries or specific regions in a country using o
 
 Example
 -------
->>> import worldmap
->>> county_names = ['zeeland','Overijssel', 'flevoland']
->>> opacity = [0.4, 0.6, 0.9]
->>> out = worldmap.plot(county_names,opacity=opacity, cmap='Set1', map_name='netherlands', filename='Netherlands_map.svg')
+>> # Import library
+>> import worldmap as wm
+>>
+>> # Set the regions to plot
+>> region = ['zeeland','Overijssel', 'flevoland']
+>>
+> # Color the regions
+>> opacity = [0.1, 0.2, 0.6]
+>>
+>> # Create the SVG
+>> results = wm.plot(region, opacity=opacity, cmap='Set1', map_name='netherlands')
 
 References
 ----------

@@ -63,7 +63,22 @@ def plot(county_names, map_name='world', opacity=[], cmap='Set1', filename='cust
 
     Returns
     -------
-    tuple containing dict (out) with results and the filename (out, filename).
+    tuple (pd.DataFrame, filename)
+        Containing dataframe with the plotted regions, with its colors and the filename.
+
+    Examples
+    --------
+    >>> # Import library
+    >>> import worldmap as wm
+    >>>
+    >>> # Set the regions to plot
+    >>> region = ['zeeland','Overijssel', 'flevoland']
+    >>>
+    >>> # Color the regions
+    >>> opacity = [0.1, 0.2, 0.6]
+    >>>
+    >>> # Create the SVG
+    >>> results = wm.plot(region, opacity=opacity, cmap='Set1', map_name='netherlands')
 
     """
     Param = {}
@@ -115,30 +130,31 @@ def plot(county_names, map_name='world', opacity=[], cmap='Set1', filename='cust
         SVGcounty_names = np.append(SVGcounty_names, attributes[i]['title'])
 
     # Match with best input-names
-    [dfmatch,_] = deepStringMatching(SVGcounty_names,Param['county_names'], methodtype='FUZZY', verbose=0)
+    dfmatch, _ = deepStringMatching(SVGcounty_names, Param['county_names'], methodtype='FUZZY', verbose=0)
     # IN
     SVGcolorCity = dfmatch.idxmax(axis=0).index.values
     dfmatch.reset_index(inplace=True, drop=True)
     idx = dfmatch.idxmax(axis=0).values
     attributesIN = np.array(attributes)[idx]
     # OUT
-    idxOUT=np.setdiff1d(np.arange(0,dfmatch.shape[0]),idx)
+    idxOUT = np.setdiff1d(np.arange(0, dfmatch.shape[0]),idx)
     attributesOUT = np.array(attributes)[idxOUT]
 
     # STORE
     df['SVGcity'] = SVGcolorCity
-    df['SVGcity'] = df['SVGcity'].str.replace(' ','')
+    df['SVGcity'] = df['SVGcity'].str.replace(' ', '', regex=True)
     df['attr'] = attributesIN
 
     if Param['verbose']: print('[worldmap] %.0f out of %.0f cities/counties detected and processed.' %(df.shape[0], len(Param['county_names'])))
 
     # DFOUT
     SVGcounty_namesOUT=[]
-    for i in range(0,len(attributesOUT)):
+    for i in range(0, len(attributesOUT)):
         SVGcounty_namesOUT = np.append(SVGcounty_namesOUT, attributesOUT[i]['title'])
     d = {'county_names':SVGcounty_namesOUT, 'SVGcity':SVGcounty_namesOUT, 'opacity': 1, 'fill':'#CCCCCC', 'attr':attributesOUT}
     dfout = pd.DataFrame(d)
-    dfout=pd.concat((df,dfout), axis=0)
+    dfout = pd.concat((df, dfout), axis=0)
+    dfout.reset_index(drop=True, inplace=True)
 
     # WRITE TO FILE
     _to_svg(df, attributesOUT, Param)
@@ -163,6 +179,12 @@ def list_county_names(map_name='world'):
     -------
     list of county/country names.
 
+    Examples
+    --------
+    >>> county_names = worldmap.list_county_names(map_name='world')
+    >>> county_names = worldmap.list_county_names(map_name='netherlands')
+    >>> county_names = worldmap.list_county_names(map_name='new zealand')
+
     """
     [DIROK, DIRMAP] = download_resources()
     if not DIROK: return
@@ -186,7 +208,7 @@ def list_map_names():
     list of str containing map names.
 
     """
-    [DIROK, DIRMAP] = download_resources()
+    DIROK, DIRMAP = download_resources()
     if DIROK:
         dirfiles = os.listdir(DIRMAP)
         getfiles = [s for s in dirfiles if "svg" in s]
@@ -209,12 +231,17 @@ def county2code(county_names):
     -------
     list of str containing abbrevations.
 
-    """
-    [DIROK, DIRMAP] = download_resources()
+    Examples
+    --------
+    >>> results = worldmap.county2code('Netherlands')
+    >>> results = worldmap.county2code('Germany')
 
-    df=pd.read_csv(CITYCODE, sep=';', encoding='latin1')
+    """
+    DIROK, DIRMAP = download_resources()
+
+    df = pd.read_csv(CITYCODE, sep=';', encoding='latin1')
     try:
-        [dfmatch,_] = deepStringMatching(df.Country, county_names, methodtype='FUZZY', verbose=0)
+        dfmatch, _ = deepStringMatching(df.Country, county_names, methodtype='FUZZY', verbose=0)
         citymatch = dfmatch.idxmax(axis=0).values
         dfmatch.index = list(df.code)
         citycode = list(dfmatch.idxmax(axis=0).values)
@@ -240,8 +267,13 @@ def code2county(codes):
     -------
     list of str containing county_names.
 
+    Examples
+    --------
+    >>> NL = wm.code2county('NL')
+    >>> GB = wm.code2county('GB')
+
     """
-    [DIROK, DIRMAP] = download_resources()
+    DIROK, DIRMAP = download_resources()
 
     citymatch=''
     citycode=None
@@ -251,7 +283,7 @@ def code2county(codes):
     if len(idx)!=0:
         citymatch = df.Country.iloc[idx].values[0]
         citycode = df.code.iloc[idx].values[0]
-    return(citycode, citymatch)    
+    return(citycode, citymatch)
 
 
 # %% Import example dataset from github.
