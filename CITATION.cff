@@ -1,0 +1,22 @@
+# YAML 1.2
+---
+authors: 
+  -
+    family-names: Taskesen
+    given-names: Erdogan
+    orcid: "https://orcid.org/0000-0002-3430-9618"
+cff-version: "1.1.0"
+date-released: 2020-10-07
+keywords: 
+  - "python"
+  - "svg"
+  - "graphics"
+  - "countries"
+  - "worldmap"
+  - "plot"
+license: "MIT"
+message: "If you use this software, please cite it using these metadata."
+repository-code: ""https://erdogant.github.io/worldmap""
+title: "The worldmap python package enables to color different countries in the world or the regions per country. "
+version: "0.1.0"
+...
