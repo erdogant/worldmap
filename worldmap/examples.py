@@ -3,13 +3,13 @@ import worldmap
 print(worldmap.__version__)
 
 # %% Retrieve availble maps that can be used to superimpose data on top of it
-[map_names,filenames] = worldmap.map_names()
+map_names, filenames = worldmap.list_map_names()
 
 # %% Retrieve names in map
-county_names = worldmap.county_names(map_name='world')
-county_names = worldmap.county_names(map_name='netherlands')
-county_names = worldmap.county_names(map_name='belgium')
-county_names = worldmap.county_names(map_name='new zealand')
+county_names = worldmap.list_county_names(map_name='world')
+county_names = worldmap.list_county_names(map_name='netherlands')
+county_names = worldmap.list_county_names(map_name='belgium')
+county_names = worldmap.list_county_names(map_name='new zealand')
 
 # %% Retrieve citynames for abbrevations
 out = worldmap.code2county('NL')

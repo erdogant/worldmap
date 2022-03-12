@@ -25,7 +25,7 @@ pip install worldmap
 ```
 
 ```python
-import worldmap as worldmap
+import worldmap as wm
 ```
 
 - Simple example to color the different regions in the Netherlands:
@@ -33,7 +33,7 @@ import worldmap as worldmap
 names   = ['zeeland','Overijssel', 'flevoland']
 opacity = [0.1, 0.2, 0.6]
 cmap    = ['#ff0000'] # Different red accents
-out = worldmap.colormap(names,opacity=opacity, cmap='Set1', loadmap='netherlands')
+out = wm.plot(names,opacity=opacity, cmap='Set1', map_name='netherlands')
 ```
 <p align="center">
   <img src="https://github.com/erdogant/worldmap/blob/master/docs/figs/figure_netherlands.png" width="300" />
@@ -46,7 +46,7 @@ out = worldmap.colormap(names,opacity=opacity, cmap='Set1', loadmap='netherlands
 #### Coloring of maps   
 names   = ['Nederland']
 opacity = [100]
-out = worldmap.colormap(names, opacity=opacity, loadmap='world')
+out = wm.plot(names, opacity=opacity, cmap='Set1', map_name='netherlands')
 ```
 <p align="center">
   <img src="https://github.com/erdogant/worldmap/blob/master/docs/figs/worldmap.png" width="300" />
@@ -55,21 +55,21 @@ out = worldmap.colormap(names, opacity=opacity, loadmap='world')
 
 - Retrieve citynames for abbrevations:
 ```python
-NL = worldmap.code2city('NL')
-GB = worldmap.code2city('GB')
+NL = wm.code2county('NL')
+GB = wm.code2county('GB')
 ```
 
 - Retrieve citynames for abbrevations:
 ```python
-abbr_1 = worldmap.city2code('Netherlands')
-abbr_2 = worldmap.city2code('Germany')
+abbr_1 = wm.county2code('Netherlands')
+abbr_2 = wm.county2code('Germany')
 ```
 
 - Retrieve names in map
 ```python
-countries_world = worldmap.getmapnames(loadmap='world')
-region_NL = worldmap.getmapnames(loadmap='netherlands')
-regions_BE = worldmap.getmapnames(loadmap='belgium')
+countries_world = wm.list_county_names(map_name='world')
+region_NL = wm.list_county_names(map_name='netherlands')
+regions_BE = wm.list_county_names(map_name='belgium')
 ```
 
 ### Citation
@@ -93,6 +93,4 @@ Please cite worldmap in your publications if this is useful for your research. H
 * All kinds of contributions are welcome!
 * If you wish to buy me a <a href="https://www.buymeacoffee.com/erdogant">Coffee</a> for this work, it is very appreciated :)
 
-### Licence
-See [LICENSE](LICENSE) for details.
 
