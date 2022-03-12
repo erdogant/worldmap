@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API References &mdash; worldmap worldmap documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Coding quality" href="Coding%20quality.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> worldmap
+          </a>
+              <div class="version">
+                0.1.6
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+    
+              <p class="caption" role="heading"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html#uninstalling">Uninstalling</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Tutorials.html">Input</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorials.html#output">Output</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html">Coloring of regions in Country</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html#coloring-of-country-in-worldmap">Coloring of Country in Worldmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html#retrieve-all-map-names">Retrieve all Map Names</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html#retrieve-county-names">Retrieve County Names</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html#convert-country-to-abbrevation">Convert Country to Abbrevation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html#convert-abbrevations-to-county-names">Convert Abbrevations to County names</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Documentation.html">Sponsor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Documentation.html#github">Github</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Coding%20quality.html">Coding quality</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API References</a></li>
+</ul>
+
+    <a href= "genindex.html">Index</a>
+  
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">worldmap</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>API References</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/worldmap.worldmap.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-worldmap.worldmap">
+<span id="api-references"></span><h1>API References<a class="headerlink" href="#module-worldmap.worldmap" title="Permalink to this headline"></a></h1>
+<p>Colors countries or specific regions in a country.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="worldmap.worldmap.code2county">
+<span class="sig-prename descclassname"><span class="pre">worldmap.worldmap.</span></span><span class="sig-name descname"><span class="pre">code2county</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">codes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#worldmap.worldmap.code2county" title="Permalink to this definition"></a></dt>
+<dd><p>Convert abbrevation code to county_name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>codes</strong> (<em>list of str.</em>) – list containing codes.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list of str containing county_names.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">NL</span> <span class="o">=</span> <span class="n">wm</span><span class="o">.</span><span class="n">code2county</span><span class="p">(</span><span class="s1">&#39;NL&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">GB</span> <span class="o">=</span> <span class="n">wm</span><span class="o">.</span><span class="n">code2county</span><span class="p">(</span><span class="s1">&#39;GB&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="worldmap.worldmap.county2code">
+<span class="sig-prename descclassname"><span class="pre">worldmap.worldmap.</span></span><span class="sig-name descname"><span class="pre">county2code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">county_names</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#worldmap.worldmap.county2code" title="Permalink to this definition"></a></dt>
+<dd><p>Convert county_name to abbrevation code.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>county_names</strong> (<em>list of str</em>) – list containing county_names.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list of str containing abbrevations.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">results</span> <span class="o">=</span> <span class="n">worldmap</span><span class="o">.</span><span class="n">county2code</span><span class="p">(</span><span class="s1">&#39;Netherlands&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">results</span> <span class="o">=</span> <span class="n">worldmap</span><span class="o">.</span><span class="n">county2code</span><span class="p">(</span><span class="s1">&#39;Germany&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="worldmap.worldmap.download_resources">
+<span class="sig-prename descclassname"><span class="pre">worldmap.worldmap.</span></span><span class="sig-name descname"><span class="pre">download_resources</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'https://erdogant.github.io/datasets/SVG_MAPS.zip'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#worldmap.worldmap.download_resources" title="Permalink to this definition"></a></dt>
+<dd><p>Import example dataset from github.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>url</strong> (<em>str</em>) – url-Link to dataset. The default is ‘<a class="reference external" href="https://erdogant.github.io/datasets/SVG_MAPS.zip">https://erdogant.github.io/datasets/SVG_MAPS.zip</a>’.</p></li>
+<li><p><strong>verbose</strong> (<em>int</em><em>, </em><em>optional</em>) – Print message to screen. The default is 3.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple containing import status and resources.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="worldmap.worldmap.list_county_names">
+<span class="sig-prename descclassname"><span class="pre">worldmap.worldmap.</span></span><span class="sig-name descname"><span class="pre">list_county_names</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">map_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'world'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#worldmap.worldmap.list_county_names" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieve all county_names.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>map_name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the country. The default is ‘world’.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list of county/country names.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">county_names</span> <span class="o">=</span> <span class="n">worldmap</span><span class="o">.</span><span class="n">list_county_names</span><span class="p">(</span><span class="n">map_name</span><span class="o">=</span><span class="s1">&#39;world&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">county_names</span> <span class="o">=</span> <span class="n">worldmap</span><span class="o">.</span><span class="n">list_county_names</span><span class="p">(</span><span class="n">map_name</span><span class="o">=</span><span class="s1">&#39;netherlands&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">county_names</span> <span class="o">=</span> <span class="n">worldmap</span><span class="o">.</span><span class="n">list_county_names</span><span class="p">(</span><span class="n">map_name</span><span class="o">=</span><span class="s1">&#39;new zealand&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="worldmap.worldmap.list_map_names">
+<span class="sig-prename descclassname"><span class="pre">worldmap.worldmap.</span></span><span class="sig-name descname"><span class="pre">list_map_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#worldmap.worldmap.list_map_names" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieve all map names.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of str containing map names.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="worldmap.worldmap.plot">
+<span class="sig-prename descclassname"><span class="pre">worldmap.worldmap.</span></span><span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">county_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">map_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'world'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Set1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'custom_map.svg'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showfig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#worldmap.worldmap.plot" title="Permalink to this definition"></a></dt>
+<dd><p>Color countries.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>county_names</strong> (<em>list of str</em>) – Names of countries or regions within a county to be colored.</p></li>
+<li><p><strong>map_name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the county to be colored. The default is ‘world’.</p></li>
+<li><p><strong>opacity</strong> (<em>list of float</em><em> [</em><em>0-1</em><em>]</em><em>, </em><em>optional</em>) – Set the opacity for each of the map_name(s). The default is [].
+If values are &gt;1, it is scaled between [0-1]
+0 = full transparancy, 1= no transparancy</p></li>
+<li><p><strong>cmap</strong> (<em>str</em><em>, </em><em>optional</em>) – Colormap to be used. Colors is set on the unique county_names. The default is ‘Set1’. All colormaps can be reverted using the “_r”: e.g., binary_r
+[‘#ffffff’,’#1f1f1f’]: Each map with a specified color
+[‘#ff0000’]: All maps have a red color
+‘Set1’     : Discrete colors (default)
+‘Pastel1’  : Discrete colors
+‘Paired’   : Discrete colors
+‘bwr’      : Blue-white-red
+‘RdBu’     : Red-white-Blue
+‘binary’   : black-white
+‘seismic’  : Blue-white-red
+‘rainbow’  : all coors
+‘Blues’    : white-to-blue</p></li>
+<li><p><strong>filename</strong> (<em>str</em><em>, </em><em>optional</em>) – filepath to write the output file. The default is ‘custom_map.svg’.</p></li>
+<li><p><strong>showfig</strong> (<em>bool</em><em>, </em><em>optional</em>) – Open figure in browser. The default is False.</p></li>
+<li><p><strong>verbose</strong> (<em>int</em><em>, </em><em>optional</em>) – print message to screen. The default is True.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Containing dataframe with the plotted regions, with its colors and the filename.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple (pd.DataFrame, filename)</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Import library</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">worldmap</span> <span class="k">as</span> <span class="nn">wm</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Set the regions to plot</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;zeeland&#39;</span><span class="p">,</span><span class="s1">&#39;Overijssel&#39;</span><span class="p">,</span> <span class="s1">&#39;flevoland&#39;</span><span class="p">]</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Color the regions</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">opacity</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">]</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Create the SVG</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">results</span> <span class="o">=</span> <span class="n">wm</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">region</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="n">opacity</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Set1&#39;</span><span class="p">,</span> <span class="n">map_name</span><span class="o">=</span><span class="s1">&#39;netherlands&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<hr>
+<center>
+        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEADP27U&placement=erdogantgithubio" id="_carbonads_js"></script>
+</center>
+<hr></section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Coding%20quality.html" class="btn btn-neutral float-left" title="Coding quality" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Erdogan Taskesen.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

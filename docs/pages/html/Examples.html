@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coloring of regions in Country &mdash; worldmap worldmap documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Sponsor" href="Documentation.html" />
+    <link rel="prev" title="Input" href="Tutorials.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> worldmap
+          </a>
+              <div class="version">
+                0.1.6
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+    
+              <p class="caption" role="heading"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html#uninstalling">Uninstalling</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Tutorials.html">Input</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorials.html#output">Output</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Coloring of regions in Country</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#coloring-of-country-in-worldmap">Coloring of Country in Worldmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#retrieve-all-map-names">Retrieve all Map Names</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#retrieve-county-names">Retrieve County Names</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#convert-country-to-abbrevation">Convert Country to Abbrevation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#convert-abbrevations-to-county-names">Convert Abbrevations to County names</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Documentation.html">Sponsor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Documentation.html#github">Github</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Coding%20quality.html">Coding quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="worldmap.worldmap.html">API References</a></li>
+</ul>
+
+    <a href= "genindex.html">Index</a>
+  
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">worldmap</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Coloring of regions in Country</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Examples.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="coloring-of-regions-in-country">
+<h1>Coloring of regions in Country<a class="headerlink" href="#coloring-of-regions-in-country" title="Permalink to this headline"></a></h1>
+<p>Here we will color specific counties in a Country.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import library</span>
+<span class="kn">import</span> <span class="nn">worldmap</span> <span class="k">as</span> <span class="nn">wm</span>
+
+<span class="c1"># Set the regions to plot</span>
+<span class="n">region</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;zeeland&#39;</span><span class="p">,</span><span class="s1">&#39;Overijssel&#39;</span><span class="p">,</span> <span class="s1">&#39;flevoland&#39;</span><span class="p">]</span>
+
+<span class="c1"># Colors for the accompanying regions</span>
+<span class="n">opacity</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">]</span>
+
+<span class="c1"># Create the SVG</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">wm</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">region</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="n">opacity</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Set1&#39;</span><span class="p">,</span> <span class="n">map_name</span><span class="o">=</span><span class="s1">&#39;netherlands&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils align-center" id="id1">
+<caption><span class="caption-text">Netherlands</span><a class="headerlink" href="#id1" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><img alt="fig1" src="_images/figure_netherlands.png" /></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="coloring-of-country-in-worldmap">
+<h1>Coloring of Country in Worldmap<a class="headerlink" href="#coloring-of-country-in-worldmap" title="Permalink to this headline"></a></h1>
+<p>Here we will color specific countries in the worldmap.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import library</span>
+<span class="kn">import</span> <span class="nn">worldmap</span> <span class="k">as</span> <span class="nn">wm</span>
+
+<span class="c1"># Coloring of maps</span>
+<span class="n">county_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Norway&#39;</span><span class="p">,</span><span class="s1">&#39;Nederland&#39;</span><span class="p">,</span><span class="s1">&#39;brazile&#39;</span><span class="p">,</span> <span class="s1">&#39;austrialia&#39;</span><span class="p">]</span>
+<span class="c1"># Colors regions</span>
+<span class="n">opacity</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
+
+<span class="c1"># Create the SVG</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">worldmap</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">county_names</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="n">opacity</span><span class="p">,</span> <span class="n">map_name</span><span class="o">=</span><span class="s1">&#39;world&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Set1&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils align-center" id="id2">
+<caption><span class="caption-text">Netherlands</span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><img alt="fig2" src="_images/fig_world.png" /></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="retrieve-all-map-names">
+<h1>Retrieve all Map Names<a class="headerlink" href="#retrieve-all-map-names" title="Permalink to this headline"></a></h1>
+<p>Retrieve all the available country names in that can be used in the worldmap.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import library</span>
+<span class="kn">import</span> <span class="nn">worldmap</span> <span class="k">as</span> <span class="nn">wm</span>
+
+<span class="c1"># Worldmap</span>
+<span class="n">county_names</span> <span class="o">=</span> <span class="n">wm</span><span class="o">.</span><span class="n">list_county_names</span><span class="p">(</span><span class="n">map_name</span><span class="o">=</span><span class="s1">&#39;world&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">county_names</span><span class="p">)</span>
+<span class="c1"># array([&#39;Andorra&#39;, &#39;United Arab Emirates&#39;, &#39;Afghanistan&#39;,</span>
+<span class="c1"># &#39;Antigua and Barbuda&#39;, &#39;Anguilla&#39;, &#39;Albania&#39;, &#39;Armenia&#39;, &#39;Angola&#39;,</span>
+<span class="c1"># &#39;Argentina&#39;, &#39;American Samoa&#39;, &#39;Austria&#39;, &#39;Australia&#39;, &#39;Aruba&#39;,</span>
+<span class="c1"># &#39;Aland Islands&#39;, &#39;Azerbaijan&#39;, &#39;Bosnia and Herzegovina&#39;,</span>
+<span class="c1"># &#39;Barbados&#39;, &#39;Bangladesh&#39;, &#39;Belgium&#39;, &#39;Burkina Faso&#39;, &#39;Bulgaria&#39;,</span>
+<span class="c1"># &#39;Bahrain&#39;, &#39;Burundi&#39;, &#39;Benin&#39;, &#39;Saint Barthelemy&#39;,</span>
+<span class="c1"># &#39;Brunei Darussalam&#39;, &#39;Bolivia&#39;, &#39;Bermuda&#39;, ...]</span>
+
+<span class="c1"># Regions in the Netherlands</span>
+<span class="n">county_names</span> <span class="o">=</span> <span class="n">wm</span><span class="o">.</span><span class="n">list_county_names</span><span class="p">(</span><span class="n">map_name</span><span class="o">=</span><span class="s1">&#39;netherlands&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">county_names</span><span class="p">)</span>
+<span class="c1"># array([&#39;Drenthe&#39;, &#39;Flevoland&#39;, &#39;Friesland&#39;, &#39;Gelderland&#39;, &#39;Groningen&#39;,</span>
+<span class="c1"># &#39;Limburg&#39;, &#39;Noord-Brabant&#39;, &#39;Noord-Holland&#39;, &#39;Overijssel&#39;,</span>
+<span class="c1"># &#39;Utrecht&#39;, &#39;Zeeland&#39;, &#39;Zuid-Holland&#39;], dtype=&#39;&lt;U32&#39;)</span>
+</pre></div>
+</div>
+</section>
+<section id="retrieve-county-names">
+<h1>Retrieve County Names<a class="headerlink" href="#retrieve-county-names" title="Permalink to this headline"></a></h1>
+<p>Retrieve all the available county names in that can be used in the Country.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import library</span>
+<span class="kn">import</span> <span class="nn">worldmap</span> <span class="k">as</span> <span class="nn">wm</span>
+
+<span class="c1"># Retrieve names for specific map</span>
+<span class="n">county_names</span> <span class="o">=</span> <span class="n">wm</span><span class="o">.</span><span class="n">list_county_names</span><span class="p">(</span><span class="n">map_name</span><span class="o">=</span><span class="s1">&#39;netherlands&#39;</span><span class="p">)</span>
+
+<span class="c1"># Print</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">county_names</span><span class="p">)</span>
+<span class="c1"># array([&#39;Drenthe&#39;, &#39;Flevoland&#39;, &#39;Friesland&#39;, &#39;Gelderland&#39;, &#39;Groningen&#39;,</span>
+<span class="c1"># &#39;Limburg&#39;, &#39;Noord-Brabant&#39;, &#39;Noord-Holland&#39;, &#39;Overijssel&#39;,</span>
+<span class="c1"># &#39;Utrecht&#39;, &#39;Zeeland&#39;, &#39;Zuid-Holland&#39;], dtype=&#39;&lt;U32&#39;)</span>
+</pre></div>
+</div>
+</section>
+<section id="convert-country-to-abbrevation">
+<h1>Convert Country to Abbrevation<a class="headerlink" href="#convert-country-to-abbrevation" title="Permalink to this headline"></a></h1>
+<p>Convert country names to the abbrevation.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import library</span>
+<span class="kn">import</span> <span class="nn">worldmap</span> <span class="k">as</span> <span class="nn">wm</span>
+
+<span class="n">results</span> <span class="o">=</span> <span class="n">worldmap</span><span class="o">.</span><span class="n">county2code</span><span class="p">([</span><span class="s1">&#39;Netherlands&#39;</span><span class="p">,</span> <span class="s1">&#39;Germany&#39;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+<span class="c1"># ([&#39;nl&#39;, &#39;de&#39;], array([&#39;netherlands&#39;, &#39;germany&#39;], dtype=object))</span>
+</pre></div>
+</div>
+</section>
+<section id="convert-abbrevations-to-county-names">
+<h1>Convert Abbrevations to County names<a class="headerlink" href="#convert-abbrevations-to-county-names" title="Permalink to this headline"></a></h1>
+<p>Convert abbrevation to county names.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import library</span>
+<span class="kn">import</span> <span class="nn">worldmap</span> <span class="k">as</span> <span class="nn">wm</span>
+
+<span class="n">nl_country</span> <span class="o">=</span> <span class="n">worldmap</span><span class="o">.</span><span class="n">code2county</span><span class="p">(</span><span class="s1">&#39;nl&#39;</span><span class="p">)</span>
+<span class="n">de_country</span> <span class="o">=</span> <span class="n">worldmap</span><span class="o">.</span><span class="n">code2county</span><span class="p">(</span><span class="s1">&#39;de&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">nl_country</span><span class="p">)</span>
+<span class="c1"># (&#39;nl&#39;, &#39;Netherlands&#39;)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">de_country</span><span class="p">)</span>
+<span class="c1"># (&#39;de&#39;, &#39;Germany&#39;)</span>
+</pre></div>
+</div>
+<hr>
+<center>
+        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEADP27U&placement=erdogantgithubio" id="_carbonads_js"></script>
+</center>
+<hr></section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Tutorials.html" class="btn btn-neutral float-left" title="Input" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Documentation.html" class="btn btn-neutral float-right" title="Sponsor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Erdogan Taskesen.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
