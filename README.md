@@ -73,6 +73,7 @@ On the [documentation pages](https://erdogant.github.io/worldmap/) you can find 
 # 
 * [Example: Convert abbrevation to county name](https://erdogant.github.io/worldmap/pages/html/Examples.html#convert-abbrevations-to-county-names)
 
+<hr>
 
 ### References:
 * http://www.w3.org/Consortium/Legal/copyright-software
