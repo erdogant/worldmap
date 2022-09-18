@@ -8,7 +8,7 @@ It requires downloading the svg files a single time and then works offline.
 
 You contribution is important
 ==============================
-If you ❤️ this project, **star** this repo at the `github page <https://github.com/erdogant/worldmap/>`_ and have a look at the `sponser page <https://github.com/erdogant/worldmap/pages/html/Documentation.html>`_!
+If you ❤️ this project, **star** this repo at the `github page <https://github.com/erdogant/worldmap/>`_ and have a look at the `sponser page <https://erdogant.github.io/worldmap/pages/html/Documentation.html>`_!
 
 
 Github
