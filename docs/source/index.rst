@@ -6,9 +6,9 @@ For this package, the svg images from https://www.w3.org are utilized, processed
 It requires downloading the svg files a single time and then works offline.
 
 
-Star is important
-======================
-If you ❤️ this project, **star** this repo at the `github page <https://github.com/erdogant/worldmap/>`_!
+You contribution is important
+==============================
+If you ❤️ this project, **star** this repo at the `github page <https://github.com/erdogant/worldmap/>`_ and have a look at the `sponser page <https://github.com/erdogant/worldmap/pages/html/Documentation.html>`_!
 
 
 Github
