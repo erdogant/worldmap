@@ -1,3 +1,5 @@
+.. include:: add_top.add
+
 Sponsor
 ############
 
@@ -33,3 +35,6 @@ Citing
 	<hr>
 
 
+
+
+.. include:: add_bottom.add

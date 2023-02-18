@@ -1,3 +1,5 @@
+.. include:: add_top.add
+
 Installation
 ################
 
@@ -48,3 +50,6 @@ Note that the removal of the environment will also remove the ``worldmap`` insta
 	<hr>
 
 
+
+
+.. include:: add_bottom.add
