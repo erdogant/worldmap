@@ -3,8 +3,6 @@ worldmap's documentation!
 
 |python| |pypi| |docs| |stars| |LOC| |downloads_month| |downloads_total| |license| |forks| |open issues| |project status| |repo-size| |donate|
 
-.. include:: add_top.add
-
 
 ``worldmap`` is a light weighted Python package that enables easy coloring of countries and/or regions in the world.
 For this package, the svg images from https://www.w3.org are utilized, processed and colored.

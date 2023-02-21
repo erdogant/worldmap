@@ -17,6 +17,7 @@
         <script src="_static/underscore.js"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -68,7 +69,15 @@
 <li class="toctree-l1"><a class="reference internal" href="Documentation.html#github">Github</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Documentation.html#citing">Citing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Coding%20quality.html">Coding quality</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">API References</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API References</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#worldmap.worldmap.code2county"><code class="docutils literal notranslate"><span class="pre">code2county()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#worldmap.worldmap.county2code"><code class="docutils literal notranslate"><span class="pre">county2code()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#worldmap.worldmap.download_resources"><code class="docutils literal notranslate"><span class="pre">download_resources()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#worldmap.worldmap.list_county_names"><code class="docutils literal notranslate"><span class="pre">list_county_names()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#worldmap.worldmap.list_map_names"><code class="docutils literal notranslate"><span class="pre">list_map_names()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#worldmap.worldmap.plot"><code class="docutils literal notranslate"><span class="pre">plot()</span></code></a></li>
+</ul>
+</li>
 </ul>
 
     <a href= "genindex.html">Index</a>
@@ -97,13 +106,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <hr>
-<center>
-        <script async src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
-        <div data-ea-publisher="erdogantgithubio" data-ea-type="text"></div>
-        <!-- <div data-ea-publisher="erdogantgithubio" data-ea-type="text" data-ea-style="fixedfooter"></div> -->
-</center>
-<hr><section id="module-worldmap.worldmap">
+  <section id="module-worldmap.worldmap">
 <span id="api-references"></span><h1>API References<a class="headerlink" href="#module-worldmap.worldmap" title="Permalink to this heading"></a></h1>
 <p>Colors countries or specific regions in a country.</p>
 <dl class="py function">
@@ -112,7 +115,7 @@
 <dd><p>Convert abbrevation code to county_name.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>codes</strong> (<em>list of str.</em>) – list containing codes.</p>
+<dd class="field-odd"><p><strong>codes</strong> (<em>list</em><em> of </em><em>str.</em>) – list containing codes.</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>list of str containing county_names.</p>
@@ -131,7 +134,7 @@
 <dd><p>Convert county_name to abbrevation code.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>county_names</strong> (<em>list of str</em>) – list containing county_names.</p>
+<dd class="field-odd"><p><strong>county_names</strong> (<em>list</em><em> of </em><em>str</em>) – list containing county_names.</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>list of str containing abbrevations.</p>
@@ -199,9 +202,9 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>county_names</strong> (<em>list of str</em>) – Names of countries or regions within a county to be colored.</p></li>
+<li><p><strong>county_names</strong> (<em>list</em><em> of </em><em>str</em>) – Names of countries or regions within a county to be colored.</p></li>
 <li><p><strong>map_name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the county to be colored. The default is ‘world’.</p></li>
-<li><p><strong>opacity</strong> (<em>list of float</em><em> [</em><em>0-1</em><em>]</em><em>, </em><em>optional</em>) – Set the opacity for each of the map_name(s). The default is [].
+<li><p><strong>opacity</strong> (<em>list</em><em> of </em><em>float</em><em> [</em><em>0-1</em><em>]</em><em>, </em><em>optional</em>) – Set the opacity for each of the map_name(s). The default is [].
 If values are &gt;1, it is scaled between [0-1]
 0 = full transparancy, 1= no transparancy</p></li>
 <li><p><strong>cmap</strong> (<em>str</em><em>, </em><em>optional</em>) – Colormap to be used. Colors is set on the unique county_names. The default is ‘Set1’. All colormaps can be reverted using the “_r”: e.g., binary_r
