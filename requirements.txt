@@ -1,0 +1,10 @@
+wget
+matplotlib
+numpy
+pandas
+svgpathtools
+colourmap
+tqdm
+rapidfuzz
+scikit-learn
+seaborn
