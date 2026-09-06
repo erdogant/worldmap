@@ -41,7 +41,7 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://erdogant.github.io/worldmap"
+Homepage = "https://d3blocks.github.io/d3blocks"
 Download = "https://github.com/erdogant/worldmap/archive/refs/tags/{version}.tar.gz"
 
 [tool.setuptools]
