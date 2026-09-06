@@ -98,22 +98,6 @@ d3.set_edge_properties(country_names=['Netherlands', 'Belgium'], cmap='Set2')
 d3.show()
 ```
 
----
-
-
-## Returns / accessible properties
-
-The worldmap object exposes the following (when applicable):
-
-- `d3.node_properties` — DataFrame or structure with properties for unique input labels / nodes
-- `d3.edge_properties` — DataFrame or structure with properties for unique edges / links
-- `d3.config` — dictionary containing configuration properties
-
-Note: `maps` itself either writes/opens an HTML file or returns an HTML string when `return_html=True`.
-
----
-
-## Examples
 
 Examples below are taken from `worldmap/examples.py` in the repository.
 
@@ -179,6 +163,20 @@ d3.set_node_properties(df)
 d3.set_edge_properties(country_names=['Netherlands', 'Belgium'], cmap='Set2')
 d3.show()
 ```
+
+
+---
+
+## Returns / accessible properties
+
+The worldmap object exposes the following (when applicable):
+
+- `d3.node_properties` — DataFrame or structure with properties for unique input labels / nodes
+- `d3.edge_properties` — DataFrame or structure with properties for unique edges / links
+- `d3.config` — dictionary containing configuration properties
+
+Note: `maps` itself either writes/opens an HTML file or returns an HTML string when `return_html=True`.
+
 
 ---
 
