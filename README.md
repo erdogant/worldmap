@@ -37,10 +37,10 @@ Homepage / source: https://github.com/erdogant/worldmap
 
 ## Installation
 
-Install directly from the repository:
+Install directly from pypi:
 
 ```
-pip install git+https://github.com/erdogant/worldmap.git
+pip install worldmap
 ```
 
 Or clone the repository and install with your preferred method.
@@ -74,87 +74,6 @@ d3.show()
 
 ---
 
-## maps(...) — parameters
-
-The primary plotting method is `maps`. The most commonly used parameters:
-
-- df (pd.DataFrame or None)
-  - Input DataFrame for markers. When present, rows should contain these columns:
-    - `lon` (float) — longitude
-    - `lat` (float) — latitude
-    - `label` (str) — optional marker label
-    - `size` (float) — optional marker size
-    - `opacity` (float) — optional per-marker opacity
-
-- size (int, float or sequence, default 10)
-  - Global size for all markers or a sequence of sizes per marker.
-
-- color (str or sequence, default '#0981D1')
-  - Global hex color or sequence of per-marker colors.
-
-- opacity (float or sequence, default 0.8)
-  - Fill opacity for markers (single value or per-marker list).
-
-- label (str or sequence, default '')
-  - Marker labels; empty string disables labels.
-
-- countries (dict)
-  - Fine-grained country styling. Top-level keys are country/region names. Use `'World'` for the global base map. Each country entry accepts:
-    - `color` (hex string)
-    - `opacity` (0..1)
-    - `line` (e.g. `'dashed'` or `'none'`) — border style
-    - `linewidth` (float)
-  - Example:
-    ```py
-    {
-      'World': {'color': '#D3D3D3', 'opacity': 0.3, 'line': 'none', 'linewidth': 1},
-      'France': {'color': '#FFA500', 'opacity': 1, 'line': 'dashed', 'linewidth': 2}
-    }
-    ```
-
-- country_names (list[str])
-  - A list of countries/regions to highlight or color (useful with `cmap`).
-
-- country_values (list[float])
-  - Numeric values per country used when mapping with `cmap` (for example to scale opacity or color).
-
-- cmap (str)
-  - Colormap name (e.g., `'Blues'`, `'Set1'`) used with `country_values` or `country_names`.
-
-- map_name (str)
-  - Specify a regional map identifier (e.g. `'netherlands'`) for provincial/region maps.
-
-- title (str, default None)
-  - Title of the figure.
-
-- filepath (str, default: user temp directory or `'d3blocks.html'`)
-  - Destination file path. Examples:
-    - Relative: `./d3blocks.html`
-    - Absolute: `C:\\temp\\d3blocks.html`
-    - `None`: return HTML string instead of saving to disk
-
-- figsize (tuple[int, int] or None)
-  - Canvas size in pixels: `[width, height]`. Use `None` or `[None, None]` to use screen resolution.
-
-- showfig (bool, default True)
-  - Open the generated HTML in the default browser when True.
-
-- overwrite (bool, default True)
-  - Overwrite existing HTML file when saving. If False and the file exists, the file is not overwritten and a warning is shown.
-
-- notebook (bool)
-  - If True, attempt to render inline in Jupyter / IPython.
-
-- save_button (bool, default True)
-  - Show a Save button in the HTML for exporting the chart as SVG.
-
-- return_html (bool, default False)
-  - If True, `maps` returns the HTML string. Otherwise the method writes a file / opens browser as configured.
-
-- reset_properties (bool, default True)
-  - Reset `node_properties` at each run. If False, reuse the current `d3.node_properties()`.
-
----
 
 ## Returns / accessible properties
 
@@ -239,7 +158,7 @@ d3.show()
 
 ## Notebook usage
 
-Set `notebook=True` to attempt inline display in a Jupyter notebook. Alternatively `return_html=True` lets you capture the HTML string and embed it manually.
+Set `notebook=True` to attempt inline display in a Jupyter notebook. Alternatively, `return_html=True` lets you capture the HTML string and embed it manually.
 
 ---
 
