@@ -2,7 +2,7 @@ from d3blocks.d3blocks import D3Blocks as worldmap
 
 __author__ = 'Erdogan Tasksen'
 __email__ = 'erdogant@gmail.com'
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 
 # module level doc-string
 __doc__ = """
