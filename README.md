@@ -1,27 +1,25 @@
 # worldmap
 
-[![Python](https://img.shields.io/pypi/pyversions/d3blocks)](https://img.shields.io/pypi/pyversions/d3blocks)
-[![Pypi](https://img.shields.io/pypi/v/d3blocks)](https://pypi.org/project/d3blocks/)
-[![Docs](https://img.shields.io/badge/Sphinx-Docs-blue)](https://d3blocks.github.io/d3blocks/)
-[![LOC](https://sloc.xyz/github/d3blocks/d3blocks/?category=code)](https://github.com/d3blocks/d3blocks/)
-[![Downloads](https://static.pepy.tech/personalized-badge/d3blocks?period=month&units=international_system&left_color=grey&right_color=brightgreen&left_text=PyPI%20downloads/month)](https://pepy.tech/project/d3blocks)
-[![Downloads](https://static.pepy.tech/personalized-badge/d3blocks?period=total&units=international_system&left_color=grey&right_color=brightgreen&left_text=Downloads)](https://pepy.tech/project/d3blocks)
-[![License](https://img.shields.io/badge/license-GPL3-green.svg)](https://github.com/d3blocks/d3blocks/blob/master/LICENSE)
-[![Forks](https://img.shields.io/github/forks/d3blocks/d3blocks.svg)](https://github.com/d3blocks/d3blocks/network)
-[![Open Issues](https://img.shields.io/github/issues/d3blocks/d3blocks.svg)](https://github.com/d3blocks/d3blocks/issues)
+[![Python](https://img.shields.io/pypi/pyversions/worldmap)](https://img.shields.io/pypi/pyversions/worldmap)
+[![Pypi](https://img.shields.io/pypi/v/worldmap)](https://pypi.org/project/worldmap/)
+[![Docs](https://img.shields.io/badge/Sphinx-Docs-blue)](https://worldmap.github.io/worldmap/)
+[![LOC](https://sloc.xyz/github/erdogant/worldmap/?category=code)](https://github.com/erdogant/worldmap/)
+[![Downloads](https://static.pepy.tech/personalized-badge/worldmap?period=month&units=international_system&left_color=grey&right_color=brightgreen&left_text=PyPI%20downloads/month)](https://pepy.tech/project/worldmap)
+[![Downloads](https://static.pepy.tech/personalized-badge/worldmap?period=total&units=international_system&left_color=grey&right_color=brightgreen&left_text=Downloads)](https://pepy.tech/project/worldmap)
+[![License](https://img.shields.io/badge/license-GPL3-green.svg)](https://github.com/erdogant/worldmap/blob/master/LICENSE)
+[![Forks](https://img.shields.io/github/forks/erdogant/worldmap.svg)](https://github.com/erdogant/worldmap/network)
+[![Open Issues](https://img.shields.io/github/issues/erdogant/worldmap.svg)](https://github.com/erdogant/worldmap/issues)
 [![Project Status](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![Medium](https://img.shields.io/badge/Medium-Blog-black)](https://d3blocks.github.io/d3blocks/pages/html/Documentation.html#medium-blog)
-![GitHub Repo stars](https://img.shields.io/github/stars/d3blocks/d3blocks)
-![GitHub repo size](https://img.shields.io/github/repo-size/d3blocks/d3blocks)
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://d3blocks.github.io/d3blocks/pages/html/Documentation.html#colab-notebook)
-[![Donate](https://img.shields.io/badge/Support%20this%20project-grey.svg?logo=github%20sponsors)](https://d3blocks.github.io/d3blocks/pages/html/Documentation.html#)
+[![Medium](https://img.shields.io/badge/Medium-Blog-black)](https://worldmap.github.io/worldmap/pages/html/Documentation.html#medium-blog)
+![GitHub Repo stars](https://img.shields.io/github/stars/erdogant/worldmap)
+![GitHub repo size](https://img.shields.io/github/repo-size/erdogant/worldmap)
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://worldmap.github.io/worldmap/pages/html/Documentation.html#colab-notebook)
+[![Donate](https://img.shields.io/badge/Support%20this%20project-grey.svg?logo=github%20sponsors)](https://worldmap.github.io/worldmap/pages/html/Documentation.html#)
 
 
 An interactive, D3-based world and regional map visualization for Python.
 
-The `worldmap` package (Maps) renders interactive maps using D3 code forked from Mike Bostock and adapted for Python. It supports coloring countries, drawing borders, and plotting latitude/longitude markers (for example, surf spots) with configurable size, color, opacity and labels. Output is generated as a self-contained HTML file you can open in a browser or embed in Jupyter.
-
-Homepage / source: https://github.com/erdogant/worldmap
+The `worldmap` package (Maps) renders interactive maps using D3. It supports coloring countries, drawing borders, and plotting latitude/longitude markers (for example, surf spots) with configurable size, color, opacity and labels. Output is generated as a self-contained HTML file you can open in a browser or embed in Jupyter.
 
 ---
 
@@ -42,10 +40,6 @@ Install directly from pypi:
 ```
 pip install worldmap
 ```
-
-Or clone the repository and install with your preferred method.
-
-Dependencies (typical): pandas, numpy. See the repository `requirements.txt` for a full list.
 
 ---
 
@@ -98,22 +92,6 @@ d3.set_edge_properties(country_names=['Netherlands', 'Belgium'], cmap='Set2')
 d3.show()
 ```
 
----
-
-
-## Returns / accessible properties
-
-The worldmap object exposes the following (when applicable):
-
-- `d3.node_properties` — DataFrame or structure with properties for unique input labels / nodes
-- `d3.edge_properties` — DataFrame or structure with properties for unique edges / links
-- `d3.config` — dictionary containing configuration properties
-
-Note: `maps` itself either writes/opens an HTML file or returns an HTML string when `return_html=True`.
-
----
-
-## Examples
 
 Examples below are taken from `worldmap/examples.py` in the repository.
 
@@ -179,6 +157,20 @@ d3.set_node_properties(df)
 d3.set_edge_properties(country_names=['Netherlands', 'Belgium'], cmap='Set2')
 d3.show()
 ```
+
+
+---
+
+## Returns / accessible properties
+
+The worldmap object exposes the following (when applicable):
+
+- `d3.node_properties` — DataFrame or structure with properties for unique input labels / nodes
+- `d3.edge_properties` — DataFrame or structure with properties for unique edges / links
+- `d3.config` — dictionary containing configuration properties
+
+Note: `maps` itself either writes/opens an HTML file or returns an HTML string when `return_html=True`.
+
 
 ---
 
