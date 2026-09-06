@@ -49,6 +49,32 @@ Dependencies (typical): pandas, numpy. See the repository `requirements.txt` for
 
 ---
 
+
+## Example figures
+
+Below are example screenshots that illustrate typical outputs from `worldmap`.
+
+> Note: the repository does not include these images by default. Add your example images to `docs/images/` with the filenames shown below or update the paths if you store them elsewhere.
+
+
+Global map with markers (dark theme)
+
+![Global map with markers (dark theme)](docs/images/world_markers_dark.png)
+
+Dutch provinces (regional map, dark theme)
+
+![Netherlands provinces, highlighted regions](docs/images/netherlands_provinces_dark.png)
+
+Italy provinces (light theme)
+
+![Italy provinces (light theme)](docs/images/italy_provinces_light.png)
+
+
+If you'd like, I can add these image files to the repository for you — either by uploading them here (paste or attach the files) or by fetching them from URLs you provide.
+
+
+---
+
 ## Quick start
 
 Basic usage (one-liner):
