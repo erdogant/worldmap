@@ -19,9 +19,7 @@
 
 An interactive, D3-based world and regional map visualization for Python.
 
-The `worldmap` package (Maps) renders interactive maps using D3 code forked from Mike Bostock and adapted for Python. It supports coloring countries, drawing borders, and plotting latitude/longitude markers (for example, surf spots) with configurable size, color, opacity and labels. Output is generated as a self-contained HTML file you can open in a browser or embed in Jupyter.
-
-Homepage / source: https://github.com/erdogant/worldmap
+The `worldmap` package (Maps) renders interactive maps using D3. It supports coloring countries, drawing borders, and plotting latitude/longitude markers (for example, surf spots) with configurable size, color, opacity and labels. Output is generated as a self-contained HTML file you can open in a browser or embed in Jupyter.
 
 ---
 
@@ -42,10 +40,6 @@ Install directly from pypi:
 ```
 pip install worldmap
 ```
-
-Or clone the repository and install with your preferred method.
-
-Dependencies (typical): pandas, numpy. See the repository `requirements.txt` for a full list.
 
 ---
 
