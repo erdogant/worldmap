@@ -59,15 +59,15 @@ Below are example screenshots that illustrate typical outputs from `worldmap`.
 
 Global map with markers (dark theme)
 
-![Global map with markers (dark theme)](docs/images/world_markers_dark.png)
+![Global map with markers (dark theme)](docs/figs/fig1.png)
 
 Dutch provinces (regional map, dark theme)
 
-![Netherlands provinces, highlighted regions](docs/images/netherlands_provinces_dark.png)
+![Netherlands provinces, highlighted regions](docs/figs/fig2.png)
 
 Italy provinces (light theme)
 
-![Italy provinces (light theme)](docs/images/italy_provinces_light.png)
+![Italy provinces (light theme)](docs/figs/fig3.png)
 
 
 If you'd like, I can add these image files to the repository for you — either by uploading them here (paste or attach the files) or by fetching them from URLs you provide.
