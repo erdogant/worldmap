@@ -6,9 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
-# DATA
-worldmap/data/*.zip
-*.svg
+# ignore dirs
+libraries/
+.pypirc
 
 # Distribution / packaging
 .pylint.*

@@ -1,88 +1,264 @@
-# Worldmap
+# worldmap
 
-[![Python](https://img.shields.io/pypi/pyversions/worldmap)](https://img.shields.io/pypi/pyversions/worldmap)
-[![PyPI Version](https://img.shields.io/pypi/v/worldmap)](https://pypi.org/project/worldmap/)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/erdogant/googletrends/blob/master/LICENSE)
-[![Github Forks](https://img.shields.io/github/forks/erdogant/worldmap.svg)](https://github.com/erdogant/worldmap/network)
-[![GitHub Open Issues](https://img.shields.io/github/issues/erdogant/worldmap.svg)](https://github.com/erdogant/worldmap/issues)
+[![Python](https://img.shields.io/pypi/pyversions/d3blocks)](https://img.shields.io/pypi/pyversions/d3blocks)
+[![Pypi](https://img.shields.io/pypi/v/d3blocks)](https://pypi.org/project/d3blocks/)
+[![Docs](https://img.shields.io/badge/Sphinx-Docs-blue)](https://d3blocks.github.io/d3blocks/)
+[![LOC](https://sloc.xyz/github/d3blocks/d3blocks/?category=code)](https://github.com/d3blocks/d3blocks/)
+[![Downloads](https://static.pepy.tech/personalized-badge/d3blocks?period=month&units=international_system&left_color=grey&right_color=brightgreen&left_text=PyPI%20downloads/month)](https://pepy.tech/project/d3blocks)
+[![Downloads](https://static.pepy.tech/personalized-badge/d3blocks?period=total&units=international_system&left_color=grey&right_color=brightgreen&left_text=Downloads)](https://pepy.tech/project/d3blocks)
+[![License](https://img.shields.io/badge/license-GPL3-green.svg)](https://github.com/d3blocks/d3blocks/blob/master/LICENSE)
+[![Forks](https://img.shields.io/github/forks/d3blocks/d3blocks.svg)](https://github.com/d3blocks/d3blocks/network)
+[![Open Issues](https://img.shields.io/github/issues/d3blocks/d3blocks.svg)](https://github.com/d3blocks/d3blocks/issues)
 [![Project Status](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![Downloads](https://pepy.tech/badge/worldmap/month)](https://pepy.tech/project/worldmap/month)
-[![Downloads](https://pepy.tech/badge/worldmap)](https://pepy.tech/project/worldmap)
-[![Sphinx](https://img.shields.io/badge/Sphinx-Docs-Green)](https://erdogant.github.io/worldmap/)
-<!---[![BuyMeCoffee](https://img.shields.io/badge/buymea-coffee-yellow.svg)](https://www.buymeacoffee.com/erdogant)-->
-<!---[![Coffee](https://img.shields.io/badge/coffee-black-grey.svg)](https://erdogant.github.io/donate/?currency=USD&amount=5)-->
+[![Medium](https://img.shields.io/badge/Medium-Blog-black)](https://d3blocks.github.io/d3blocks/pages/html/Documentation.html#medium-blog)
+![GitHub Repo stars](https://img.shields.io/github/stars/d3blocks/d3blocks)
+![GitHub repo size](https://img.shields.io/github/repo-size/d3blocks/d3blocks)
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://d3blocks.github.io/d3blocks/pages/html/Documentation.html#colab-notebook)
+[![Donate](https://img.shields.io/badge/Support%20this%20project-grey.svg?logo=github%20sponsors)](https://d3blocks.github.io/d3blocks/pages/html/Documentation.html#)
 
-``worldmap`` is a light weighted Python package that enables easy coloring of countries and/or regions in the world.
-For this package, the svg images from https://www.w3.org are utilized, processed and colored.
-It requires downloading the svg files a single time and then works offline.
 
-# 
-**⭐️ Star this repo if you like it ⭐️**
-#
+An interactive, D3-based world and regional map visualization for Python.
 
-#### Install worldmap from PyPI
+The `worldmap` package (Maps) renders interactive maps using D3 code forked from Mike Bostock and adapted for Python. It supports coloring countries, drawing borders, and plotting latitude/longitude markers (for example, surf spots) with configurable size, color, opacity and labels. Output is generated as a self-contained HTML file you can open in a browser or embed in Jupyter.
 
-```bash
-pip install worldmap
+Homepage / source: https://github.com/erdogant/worldmap
+
+---
+
+## Features
+
+- Color countries (world or regional maps) using explicit colors or colormaps
+- Place markers (scatter circles) by latitude/longitude with configurable size, color, opacity and labels
+- Save interactive output as an HTML file or return HTML for embedding
+- Optionally display a Save button in the generated HTML to export the chart as SVG
+- Simple imperative API for one-shot plotting or stepwise configuration
+
+---
+
+## Installation
+
+Install directly from the repository:
+
+```
+pip install git+https://github.com/erdogant/worldmap.git
 ```
 
-#### Import worldmap package
+Or clone the repository and install with your preferred method.
 
-```python
-import worldmap as wm
+Dependencies (typical): pandas, numpy. See the repository `requirements.txt` for a full list.
+
+---
+
+## Quick start
+
+Basic usage (one-liner):
+
+```py
+from worldmap import worldmap
+
+d3 = worldmap()
+df = d3.import_example(data='surfspots')   # example data included with the package
+d3.maps(df)                                # show map with markers
 ```
-# 
 
+If you prefer a stepwise workflow:
 
-### [Documentation pages](https://erdogant.github.io/worldmap/)
+```py
+from worldmap import worldmap
 
-On the [documentation pages](https://erdogant.github.io/worldmap/) you can find detailed information about the working of the ``worldmap`` with many examples. 
+d3 = worldmap(chart='maps', frame=False)
+d3.set_node_properties(df)
+d3.set_edge_properties(country_names=['Netherlands', 'Belgium'], cmap='Set2')
+d3.show()
+```
 
-<hr> 
+---
 
-### Examples
+## maps(...) — parameters
 
-# 
+The primary plotting method is `maps`. The most commonly used parameters:
 
-* [Example: color the different regions in a country](https://erdogant.github.io/worldmap/pages/html/Examples.html)
+- df (pd.DataFrame or None)
+  - Input DataFrame for markers. When present, rows should contain these columns:
+    - `lon` (float) — longitude
+    - `lat` (float) — latitude
+    - `label` (str) — optional marker label
+    - `size` (float) — optional marker size
+    - `opacity` (float) — optional per-marker opacity
 
-<p align="left">
-  <a href="https://erdogant.github.io/worldmap/pages/html/Examples.html">
-  <img src="https://github.com/erdogant/worldmap/blob/master/docs/figs/figure_netherlands.png" width="300" />
-  </a>
-</p>
+- size (int, float or sequence, default 10)
+  - Global size for all markers or a sequence of sizes per marker.
 
+- color (str or sequence, default '#0981D1')
+  - Global hex color or sequence of per-marker colors.
 
-# 
+- opacity (float or sequence, default 0.8)
+  - Fill opacity for markers (single value or per-marker list).
 
-* [Example: color the different in the worldmap](https://erdogant.github.io/worldmap/pages/html/Examples.html#coloring-of-country-in-worldmap)
+- label (str or sequence, default '')
+  - Marker labels; empty string disables labels.
 
-<p align="left">
-  <a href="https://erdogant.github.io/worldmap/pages/html/Examples.html#coloring-of-country-in-worldmap">
-  <img src="https://github.com/erdogant/worldmap/blob/master/docs/figs/fig_world.png" width="600" />
-  </a>
-</p>
+- countries (dict)
+  - Fine-grained country styling. Top-level keys are country/region names. Use `'World'` for the global base map. Each country entry accepts:
+    - `color` (hex string)
+    - `opacity` (0..1)
+    - `line` (e.g. `'dashed'` or `'none'`) — border style
+    - `linewidth` (float)
+  - Example:
+    ```py
+    {
+      'World': {'color': '#D3D3D3', 'opacity': 0.3, 'line': 'none', 'linewidth': 1},
+      'France': {'color': '#FFA500', 'opacity': 1, 'line': 'dashed', 'linewidth': 2}
+    }
+    ```
 
+- country_names (list[str])
+  - A list of countries/regions to highlight or color (useful with `cmap`).
 
-# 
-* [Example: Retrieve all Map Names](https://erdogant.github.io/worldmap/pages/html/Examples.html#retrieve-all-map-names)
-# 
-* [Example: Retrieve county Names](https://erdogant.github.io/worldmap/pages/html/Examples.html#retrieve-county-names)
-# 
-* [Example: Convert county name to abbrevation](https://erdogant.github.io/worldmap/pages/html/Examples.html#convert-country-to-abbrevation)
-# 
-* [Example: Convert abbrevation to county name](https://erdogant.github.io/worldmap/pages/html/Examples.html#convert-abbrevations-to-county-names)
+- country_values (list[float])
+  - Numeric values per country used when mapping with `cmap` (for example to scale opacity or color).
 
-<hr>
+- cmap (str)
+  - Colormap name (e.g., `'Blues'`, `'Set1'`) used with `country_values` or `country_names`.
 
-### References:
-* http://www.w3.org/Consortium/Legal/copyright-software
+- map_name (str)
+  - Specify a regional map identifier (e.g. `'netherlands'`) for provincial/region maps.
 
-### Maintainers
-* Erdogan Taskesen, github: [erdogant](https://github.com/erdogant)
+- title (str, default None)
+  - Title of the figure.
 
-### Contribute
-* All kinds of contributions are welcome!
-* If you wish to buy me a <a href="https://www.buymeacoffee.com/erdogant">Coffee</a> for this work, it is very appreciated :)
+- filepath (str, default: user temp directory or `'d3blocks.html'`)
+  - Destination file path. Examples:
+    - Relative: `./d3blocks.html`
+    - Absolute: `C:\\temp\\d3blocks.html`
+    - `None`: return HTML string instead of saving to disk
 
+- figsize (tuple[int, int] or None)
+  - Canvas size in pixels: `[width, height]`. Use `None` or `[None, None]` to use screen resolution.
 
+- showfig (bool, default True)
+  - Open the generated HTML in the default browser when True.
+
+- overwrite (bool, default True)
+  - Overwrite existing HTML file when saving. If False and the file exists, the file is not overwritten and a warning is shown.
+
+- notebook (bool)
+  - If True, attempt to render inline in Jupyter / IPython.
+
+- save_button (bool, default True)
+  - Show a Save button in the HTML for exporting the chart as SVG.
+
+- return_html (bool, default False)
+  - If True, `maps` returns the HTML string. Otherwise the method writes a file / opens browser as configured.
+
+- reset_properties (bool, default True)
+  - Reset `node_properties` at each run. If False, reuse the current `d3.node_properties()`.
+
+---
+
+## Returns / accessible properties
+
+The worldmap object exposes the following (when applicable):
+
+- `d3.node_properties` — DataFrame or structure with properties for unique input labels / nodes
+- `d3.edge_properties` — DataFrame or structure with properties for unique edges / links
+- `d3.config` — dictionary containing configuration properties
+
+Note: `maps` itself either writes/opens an HTML file or returns an HTML string when `return_html=True`.
+
+---
+
+## Examples
+
+Examples below are taken from `worldmap/examples.py` in the repository.
+
+- Markers only
+
+```py
+from worldmap import worldmap
+
+d3 = worldmap()
+df = d3.import_example(data='surfspots')
+d3.maps(df)
+```
+
+- Country coloring (worldmap-style) without markers
+
+```py
+from worldmap import worldmap
+
+d3 = worldmap()
+d3.maps(country_names=['Netherlands', 'France', 'Germany'], cmap='Set1')
+```
+
+- Regional map: Dutch provinces
+
+```py
+from worldmap import worldmap
+
+d3 = worldmap()
+d3.maps(country_names=['Zeeland', 'Overijssel', 'Flevoland'], map_name='netherlands', cmap='Set1')
+```
+
+- Countries + values (opacity scaled) + markers
+
+```py
+from worldmap import worldmap
+
+d3 = worldmap()
+df = d3.import_example(data='surfspots')
+d3.maps(df, country_names=['Netherlands', 'Australia', 'USA'], country_values=[10, 5, 20], cmap='Blues')
+```
+
+- Explicit countries dict
+
+```py
+from worldmap import worldmap
+
+d3 = worldmap()
+d3.maps(df,
+        countries={
+            'World': {'color': '#D3D3D3', 'opacity': 0.4, 'line': 'none', 'linewidth': 0.1},
+            'Netherlands': {'color': '#000FFF', 'opacity': 0.5},
+            'France': {'color': '#FFA500', 'opacity': 1, 'line': 'dashed', 'linewidth': 2},
+        })
+```
+
+- Stepwise workflow
+
+```py
+from worldmap import worldmap
+
+d3 = worldmap(chart='maps', frame=False)
+d3.set_node_properties(df)
+d3.set_edge_properties(country_names=['Netherlands', 'Belgium'], cmap='Set2')
+d3.show()
+```
+
+---
+
+## Notebook usage
+
+Set `notebook=True` to attempt inline display in a Jupyter notebook. Alternatively `return_html=True` lets you capture the HTML string and embed it manually.
+
+---
+
+## Development & Contributing
+
+- Clone the repository: `git clone https://github.com/erdogant/worldmap.git`
+- Run the example scripts in `worldmap/examples.py` to see usage patterns
+- If you add features or fix bugs, open a pull request with tests or example updates where appropriate
+
+---
+
+## Contact
+
+Author: E. Taskesen
+Email: erdogant@gmail.com
+Repository: https://github.com/erdogant/worldmap
+
+---
+
+## License
+
+See the repository for license details.

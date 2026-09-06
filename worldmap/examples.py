@@ -1,34 +1,49 @@
-# %%
-import worldmap
-print(worldmap.__version__)
+# --------------------------------------------------
+# Author      : E.Taskesen
+# Contact     : erdogant@gmail.com
+# github      : https://github.com/erdogant/worldmap
+# --------------------------------------------------
 
-# %% Retrieve availble maps that can be used to superimpose data on top of it
-map_names, filenames = worldmap.list_map_names()
+import numpy as np
+from worldmap import worldmap
 
-# %% Retrieve names in map
-county_names = worldmap.list_county_names(map_name='world')
-county_names = worldmap.list_county_names(map_name='netherlands')
-county_names = worldmap.list_county_names(map_name='belgium')
-county_names = worldmap.list_county_names(map_name='new zealand')
+# %% Import class
+from worldmap import worldmap
+dir(worldmap)
 
-# %% Retrieve citynames for abbrevations
-out = worldmap.code2county('NL')
-out = worldmap.code2county('GB')
 
-# %% Retrieve abbrevations for city names
-results = worldmap.county2code(['Netherlands', 'Germany'])
+#%%
+from worldmap import worldmap
 
-# %% Coloring of maps
-county_names = ['zeeland', 'Overijssel', 'flevoland']
-opacity = [0.4, 0.6, 0.9]
-results = worldmap.plot(county_names, opacity=opacity, cmap='Set1', map_name='netherlands', filename='Netherlands_map.svg')
-
-county_names = ['Norway', 'Nederland', 'brazile', 'austrialia']
-opacity = [10, 25, 35, 15]
-out = worldmap.plot(county_names, opacity=opacity, map_name='world', cmap='Set1')
-
-country_names = ['Nederland', 'austrialia', 'brazile']
-cmap = ['#000fff', '#000fff', '#000fff']
-out = worldmap.plot(country_names, cmap=cmap, map_name='world')
+d3 = worldmap()
+# Markers only
+df = d3.import_example(data='surfspots')
+d3.maps(df)
 
 # %%
+
+# Country coloring (worldmap-style) without markers
+d3.maps(country_names=['Netherlands', 'France', 'Germany'], cmap='Set1')
+
+# Regional map: Dutch provinces
+d3.maps(country_names=['Zeeland', 'Overijssel', 'Flevoland'], map_name='netherlands', cmap='Set1')
+
+# Countries + values (opacity scaled) + markers
+d3.maps(df, country_names=['Netherlands', 'Australia', 'USA'], country_values=[10, 5, 20], cmap='Blues')
+
+# Explicit countries dict
+d3.maps(df, 
+        countries={'World': {'color': '#D3D3D3', 'opacity': 0.4, 'line': 'none', 'linewidth': 0.1},
+                   'Netherlands': {'color': '#000FFF', 'opacity': 0.5},
+                   'France': {'color': '#FFA500', 'opacity': 1, 'line': 'dashed', 'linewidth': 2},
+                   })
+
+
+# %%
+from worldmap import worldmap
+
+# Stepwise workflow
+d3 = worldmap(chart='maps', frame=False)
+d3.set_node_properties(df)
+d3.set_edge_properties(country_names=['Netherlands', 'Belgium'], cmap='Set2')
+d3.show()

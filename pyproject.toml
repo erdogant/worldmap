@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools", "wheel", "d3blocks"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "worldmap"
+dynamic = ["version"]
+authors = [{ name = "Erdogan Taskesen", email = "erdogant@gmail.com" },]
+description = "Python package d3blocks."
+readme = "README.md"
+requires-python = ">=3"
+license = "GPL-3.0-or-later"
+keywords = [
+    "Python",
+    "visualizations",
+    "interactive",
+    "javascript",
+    "d3js",
+    "d3blocks",
+    "network",
+    "graph",
+    "data visualization",
+    "web",
+    "extendable",
+    "extension",
+    "plugin",
+    "modular",
+    "customizable"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "Operating System :: Unix",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: MacOS",
+]
+dependencies = [
+    'd3blocks',
+]
+
+[project.scripts]
+d3blocks = "d3blocks.skills:main"
+
+[project.urls]
+Homepage = "https://erdogant.github.io/d3blocks"
+Download = "https://github.com/erdogant/d3blocks/archive/{version}.tar.gz"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+d3blocks = ["skills/**/*"]
+
+[tool.setuptools.packages.find]
+include = ["d3blocks*"]
+
+[tool.setuptools.dynamic]
+version = { attr = "d3blocks.__version__" }
