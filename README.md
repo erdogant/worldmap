@@ -1,3 +1,5 @@
+# This library is since 01-10-2026 fully implemented in D3Blocks. This repo will be froozen at v1.0.1 and not be updated anymore. Please use heatmap in D3Blocks for updates and further support.
+
 # worldmap
 
 [![Python](https://img.shields.io/pypi/pyversions/worldmap)](https://img.shields.io/pypi/pyversions/worldmap)
