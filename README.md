@@ -1,5 +1,3 @@
-# This library is since 01-10-2026 fully implemented in D3Blocks. This repo will be froozen at v1.0.1 and not be updated anymore. Please use heatmap in D3Blocks for updates and further support.
-
 # worldmap
 
 [![Python](https://img.shields.io/pypi/pyversions/worldmap)](https://img.shields.io/pypi/pyversions/worldmap)
@@ -18,6 +16,8 @@
 [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://worldmap.github.io/worldmap/pages/html/Documentation.html#colab-notebook)
 [![Donate](https://img.shields.io/badge/Support%20this%20project-grey.svg?logo=github%20sponsors)](https://worldmap.github.io/worldmap/pages/html/Documentation.html#)
 
+
+## This library is since 01-10-2026 fully implemented in D3Blocks.
 
 An interactive, D3-based world and regional map visualization for Python.
 
